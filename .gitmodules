@@ -1,0 +1,3 @@
+[submodule "apps/prenix_components"]
+	path = apps/prenix_components
+	url = git@github.com:prenix-components/prenix_components.git
