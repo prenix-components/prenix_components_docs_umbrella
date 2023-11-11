@@ -20,6 +20,12 @@ defmodule PrenixComponentsDocsWeb.Router do
     get "/", PageController, :home
   end
 
+  scope "/docs", PrenixComponentsDocsWeb do
+    pipe_through :browser
+
+    get "/button", DocsController, :docs_button
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", PrenixComponentsDocsWeb do
   #   pipe_through :api

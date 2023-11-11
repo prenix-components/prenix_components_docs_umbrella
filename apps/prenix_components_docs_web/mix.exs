@@ -48,6 +48,7 @@ defmodule PrenixComponentsDocsWeb.MixProject do
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.20"},
       {:prenix_components_docs, in_umbrella: true},
+      {:prenix_components, in_umbrella: true},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"}
     ]

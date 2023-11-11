@@ -1,5 +1,7 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import '../../../prenix_components/assets/css/prenix_components.css';
 
 /* This file is for your main application CSS */
