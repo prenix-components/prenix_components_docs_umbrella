@@ -1,0 +1,143 @@
+<h2>Default</h2>
+
+<div class="preview">
+  <.dropdown>
+    <:toggle>
+      <.button>
+        Dropdown
+      </.button>
+    </:toggle>
+
+    <:menu>
+      <.dropdown_item>Profile</.dropdown_item>
+      <.dropdown_item>Billing</.dropdown_item>
+      <.dropdown_item>Settings</.dropdown_item>
+    </:menu>
+  </.dropdown>
+</div>
+
+<h2>With Caret</h2>
+<div class="preview">
+  <.dropdown>
+    <:toggle>
+      <.button>
+        Dropdown <.dropdown_rotate />
+      </.button>
+    </:toggle>
+
+    <:menu>
+      <.dropdown_item type="button">Profile</.dropdown_item>
+      <.dropdown_item type="button">Billing</.dropdown_item>
+      <.dropdown_item type="button">Settings</.dropdown_item>
+    </:menu>
+  </.dropdown>
+</div>
+
+<h2>With Custom Caret</h2>
+<div class="preview">
+  <.dropdown>
+    <:toggle>
+      <.button>
+        Dropdown
+        <.dropdown_rotate>
+          <.icon name="hero-plus-mini" />
+        </.dropdown_rotate>
+      </.button>
+    </:toggle>
+
+    <:menu>
+      <.dropdown_item type="button">Profile</.dropdown_item>
+      <.dropdown_item type="button">Billing</.dropdown_item>
+      <.dropdown_item type="button">Settings</.dropdown_item>
+    </:menu>
+  </.dropdown>
+</div>
+
+<h2>Variants</h2>
+<h3>Solid</h3>
+<div class="preview">
+  <.dropdown variant="solid">
+    <:toggle>
+      <.button>Dropdown</.button>
+    </:toggle>
+
+    <:menu>
+      <.dropdown_item type="button">Default</.dropdown_item>
+      <.dropdown_item type="button" color="primary">Primary</.dropdown_item>
+      <.dropdown_item type="button" color="secondary">Secondary</.dropdown_item>
+      <.dropdown_item type="button" color="success">Success</.dropdown_item>
+      <.dropdown_item type="button" color="warning">Warning</.dropdown_item>
+      <.dropdown_item type="button" color="danger">Danger</.dropdown_item>
+    </:menu>
+  </.dropdown>
+</div>
+
+<h3>Soft</h3>
+<div class="preview">
+  <.dropdown variant="soft">
+    <:toggle>
+      <.button>Dropdown</.button>
+    </:toggle>
+
+    <:menu>
+      <.dropdown_item type="button">Default</.dropdown_item>
+      <.dropdown_item type="button" color="primary">Primary</.dropdown_item>
+      <.dropdown_item type="button" color="secondary">Secondary</.dropdown_item>
+      <.dropdown_item type="button" color="success">Success</.dropdown_item>
+      <.dropdown_item type="button" color="warning">Warning</.dropdown_item>
+      <.dropdown_item type="button" color="danger">Danger</.dropdown_item>
+    </:menu>
+  </.dropdown>
+</div>
+
+<h3>With Divider</h3>
+<div class="preview">
+  <.dropdown>
+    <:toggle>
+      <.button>
+        Dropdown
+      </.button>
+    </:toggle>
+
+    <:menu>
+      <.dropdown_item type="button">Profile</.dropdown_item>
+      <.divider />
+      <.dropdown_item type="button">Billing</.dropdown_item>
+      <.dropdown_item type="button">Settings</.dropdown_item>
+    </:menu>
+  </.dropdown>
+</div>
+
+<h2>With Icons</h2>
+<div class="preview">
+  <.dropdown>
+    <:toggle>
+      <.button>
+        Dropdown
+      </.button>
+    </:toggle>
+
+    <:menu>
+      <.dropdown_item type="button">
+        <:start_content>
+          <.icon name="hero-currency-dollar" size="sm" />
+        </:start_content>
+        Profile
+        <:end_content>
+          <.icon name="hero-currency-dollar" size="sm" />
+        </:end_content>
+      </.dropdown_item>
+      <.dropdown_item type="button">
+        Billing
+      </.dropdown_item>
+      <.dropdown_divider />
+
+      <.dropdown_item type="button" color="danger">
+        <span class="text-danger">Log Out</span>
+        <:end_content>
+          <.icon name="hero-arrow-right-on-rectangle" size="sm" />
+        </:end_content>
+      </.dropdown_item>
+    </:menu>
+  </.dropdown>
+</div>

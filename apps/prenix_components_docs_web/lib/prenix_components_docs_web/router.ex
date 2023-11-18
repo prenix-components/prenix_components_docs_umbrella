@@ -10,6 +10,11 @@ defmodule PrenixComponentsDocsWeb.Router do
     plug :put_secure_browser_headers
   end
 
+  pipeline :docs do
+    plug :browser
+    plug :put_layout, html: {PrenixComponentsDocsWeb.Layouts, :docs}
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -21,9 +26,13 @@ defmodule PrenixComponentsDocsWeb.Router do
   end
 
   scope "/docs", PrenixComponentsDocsWeb do
-    pipe_through :browser
+    pipe_through :docs
 
-    get "/button", DocsController, :docs_button
+    get "/badge", DocsController, :badge_show
+    get "/button", DocsController, :button_show
+    get "/dropdown", DocsController, :dropdown_show
+    get "/icon", DocsController, :icon_show
+    get "/spinner", DocsController, :spinner_show
   end
 
   # Other scopes may use custom stacks.

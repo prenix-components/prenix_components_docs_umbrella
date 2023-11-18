@@ -10,16 +10,19 @@ module.exports = {
     './js/**/*.js',
     '../lib/prenix_components_docs_web.ex',
     '../lib/prenix_components_docs_web/**/*.*ex',
-    '../../prenix_components/assets/css/prenix_components.css',
+    '../../prenix_components/lib/**/*.*ex',
+    '../../prenix_components/assets/css/**/*.css',
   ],
   theme: {
     extend: {
       colors: {
+        variant: 'hsl(var(--variant) / <alpha-value>)',
+        default: 'hsl(var(--default) / <alpha-value>)',
         primary: 'hsl(var(--primary) / <alpha-value>)',
         secondary: 'hsl(var(--secondary) / <alpha-value>)',
         success: 'hsl(var(--success) / <alpha-value>)',
-        error: 'hsl(var(--error) / <alpha-value>)',
         warning: 'hsl(var(--warning) / <alpha-value>)',
+        danger: 'hsl(var(--danger) / <alpha-value>)',
       },
     },
   },

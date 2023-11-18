@@ -84,11 +84,13 @@ defmodule PrenixComponentsDocsWeb do
       # HTML escaping functionality
       import Phoenix.HTML
       # Core UI components and translation
-      import PrenixComponentsDocsWeb.CoreComponents
+      # import PrenixComponentsDocsWeb.CoreComponents
       import PrenixComponentsDocsWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
+
+      use PrenixComponents
 
       # Routes generation with the ~p sigil
       unquote(verified_routes())
