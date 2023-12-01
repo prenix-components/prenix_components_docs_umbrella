@@ -141,3 +141,21 @@
     </:menu>
   </.dropdown>
 </div>
+
+<h2>With Disabled</h2>
+<div class="preview">
+  <.dropdown>
+    <:toggle>
+      <.button>
+        Dropdown
+      </.button>
+    </:toggle>
+
+    <:menu>
+      <.dropdown_item>Profile</.dropdown_item>
+      <.dropdown_item>Billing</.dropdown_item>
+      <.dropdown_item href="/" disabled>Settings</.dropdown_item>
+      <.dropdown_item type="button" disabled>Disabled button</.dropdown_item>
+    </:menu>
+  </.dropdown>
+</div>

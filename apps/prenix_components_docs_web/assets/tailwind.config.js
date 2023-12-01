@@ -16,7 +16,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        variant: 'hsl(var(--variant) / <alpha-value>)',
         default: 'hsl(var(--default) / <alpha-value>)',
         primary: 'hsl(var(--primary) / <alpha-value>)',
         secondary: 'hsl(var(--secondary) / <alpha-value>)',

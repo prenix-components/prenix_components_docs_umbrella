@@ -33,6 +33,8 @@ defmodule PrenixComponentsDocsWeb.Router do
     get "/dropdown", DocsController, :dropdown_show
     get "/icon", DocsController, :icon_show
     get "/spinner", DocsController, :spinner_show
+    get "/table", DocsController, :table_show
+    get "/tooltip", DocsController, :tooltip_show
   end
 
   # Other scopes may use custom stacks.
