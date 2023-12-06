@@ -4,8 +4,9 @@
 
 @import '../../../prenix_components/assets/css/prenix_components.css';
 
-/* This file is for your main application CSS */
+/* @import '../node_modules/bootstrap/dist/css/bootstrap.css'; */
 
+/* This file is for your main application CSS */
 @layer components {
   .preview {
     @apply flex gap-4 items-start flex-wrap mb-10 p-4;

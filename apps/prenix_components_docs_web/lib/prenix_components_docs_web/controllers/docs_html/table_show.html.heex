@@ -9,7 +9,28 @@
     <:col :let={user}><%= user.id %></:col>
     <:col :let={user}><%= user.first %></:col>
     <:col :let={user}><%= user.last %></:col>
-    <:col :let={user}><%= user.handle %></:col>
+    <:col :let={user}>
+      <%= user.handle %>
+      <.dropdown>
+        <:toggle>
+          <.button>
+            Dropdown
+          </.button>
+        </:toggle>
+
+        <:menu>
+          <.dropdown_item>Profile</.dropdown_item>
+          <.dropdown_item>Billing</.dropdown_item>
+          <.dropdown_item>Settings</.dropdown_item>
+          <.dropdown_item>Profile</.dropdown_item>
+          <.dropdown_item>Billing</.dropdown_item>
+          <.dropdown_item>Settings</.dropdown_item>
+          <.dropdown_item>Profile</.dropdown_item>
+          <.dropdown_item>Billing</.dropdown_item>
+          <.dropdown_item>Settings</.dropdown_item>
+        </:menu>
+      </.dropdown>
+    </:col>
   </.table>
 </div>
 

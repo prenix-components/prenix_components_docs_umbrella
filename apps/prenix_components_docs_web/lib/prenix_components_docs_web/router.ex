@@ -28,10 +28,15 @@ defmodule PrenixComponentsDocsWeb.Router do
   scope "/docs", PrenixComponentsDocsWeb do
     pipe_through :docs
 
+    get "/autocomplete", DocsController, :autocomplete_show
     get "/badge", DocsController, :badge_show
     get "/button", DocsController, :button_show
+    get "/checkbox", DocsController, :checkbox_show
+    get "/checkbox_group", DocsController, :checkbox_group_show
     get "/dropdown", DocsController, :dropdown_show
+    get "/field", DocsController, :field_show
     get "/icon", DocsController, :icon_show
+    get "/modal", DocsController, :modal_show
     get "/spinner", DocsController, :spinner_show
     get "/table", DocsController, :table_show
     get "/tooltip", DocsController, :tooltip_show

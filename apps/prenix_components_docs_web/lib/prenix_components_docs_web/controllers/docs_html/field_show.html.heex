@@ -1,0 +1,83 @@
+<h2>Basic</h2>
+<div class="preview">
+  <.field id="email" name="email" label_text="Email" class="w-[400px]" />
+</div>
+
+<h2>With Value</h2>
+<div class="preview">
+  <.field name="email" label_text="Email" class="w-[400px]" value="admin@example.com" />
+</div>
+
+<h2>With Custom Label</h2>
+<div class="preview">
+  <.field name="email" class="w-[400px]">
+    <:label>
+      <.icon name="hero-envelope" /> Email
+    </:label>
+  </.field>
+</div>
+
+<h2>With Placeholder</h2>
+<div class="preview">
+  <.field
+    id="email"
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    placeholder="john.doe@example.com"
+  />
+</div>
+
+<h2>With Helper Text</h2>
+<div class="preview">
+  <.field
+    id="email"
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    placeholder="john.doe@example.com"
+    helper_text="We'll never share your email with anyone else."
+  />
+</div>
+
+<h2>With Custom Helper Text</h2>
+<div class="preview">
+  <.field
+    id="email"
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    placeholder="john.doe@example.com"
+  >
+    <:helper>
+      <.icon name="hero-exclamation-triangle" color="warning" />
+      We'll never share your email with anyone else.
+    </:helper>
+  </.field>
+</div>
+
+<h2>With Error</h2>
+<div class="preview">
+  <.field
+    id="email"
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    placeholder="john.doe@example.com"
+    helper_text="Please enter a valid email."
+    invalid={true}
+  />
+</div>
+
+<h2>Disabled</h2>
+<div class="preview">
+  <.field
+    id="email"
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    placeholder="john.doe@example.com"
+    helper_text="Please enter a valid email."
+    disabled={true}
+  />
+</div>

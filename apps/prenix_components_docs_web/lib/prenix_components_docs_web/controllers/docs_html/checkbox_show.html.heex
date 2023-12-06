@@ -1,0 +1,34 @@
+<h2>Basic</h2>
+
+<div class="preview">
+  <.checkbox id="basic" name="basic" value="1" label_text="Basic" />
+</div>
+
+<h2>Checked</h2>
+
+<div class="preview">
+  <.checkbox name="checked" value="1" checked label_text="Checked" />
+</div>
+
+<h2>With Custom Label</h2>
+<div class="preview">
+  <.checkbox name="custom-label" value="1">
+    <:label>
+      <span class="text-gray-700">
+        Please agree to the <a href="#" class="text-indigo-500">terms and conditions</a>.
+      </span>
+    </:label>
+  </.checkbox>
+</div>
+
+<h2>Invalid</h2>
+<div class="preview">
+  <.checkbox id="invalid" name="invalid" value="1" label_text="Invalid" invalid />
+</div>
+
+<h2>Disabled</h2>
+<div class="preview">
+  <.checkbox id="disabled" name="disabled" value="1" label_text="Disabled" disabled />
+
+  <.checkbox id="disabled-2" name="disabled-2" value="1" label_text="Disabled" checked disabled />
+</div>

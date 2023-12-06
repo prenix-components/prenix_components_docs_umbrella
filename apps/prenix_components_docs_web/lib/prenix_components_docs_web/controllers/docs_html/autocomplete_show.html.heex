@@ -1,0 +1,101 @@
+<h2>Basic</h2>
+<div class="preview">
+  <.autocomplete
+    class="w-[400px]"
+    id="user"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+  />
+</div>
+
+<h2>With Selected</h2>
+<div class="preview">
+  <.autocomplete
+    class="w-[400px]"
+    id="user"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options_2, fn x -> %{value: x.id, name: x.name} end)}
+    value={6}
+  />
+</div>
+
+<h2>With Custom Label</h2>
+<div class="preview">
+  <.autocomplete
+    class="w-[400px]"
+    id="user"
+    name="user"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+  >
+    <:label>
+      <.icon name="hero-user" /> User
+    </:label>
+  </.autocomplete>
+</div>
+
+<h2>With Placeholder</h2>
+<div class="preview">
+  <.autocomplete
+    class="w-[400px]"
+    id="user"
+    name="user"
+    label_text="User"
+    placeholder="Select a user"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+  />
+</div>
+
+<h2>With Helper Text</h2>
+<div class="preview">
+  <.autocomplete
+    class="w-[400px]"
+    id="user"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    helper_text="We'll never share your user with anyone else."
+  />
+</div>
+
+<h2>With Custom Helper Text</h2>
+<div class="preview">
+  <.autocomplete
+    class="w-[400px]"
+    id="user"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+  >
+    <:helper>
+      <.icon name="hero-exclamation-triangle" color="warning" />
+      We'll never share your email with anyone else.
+    </:helper>
+  </.autocomplete>
+</div>
+
+<h2>With Error</h2>
+<div class="preview">
+  <.autocomplete
+    class="w-[400px]"
+    id="user"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    invalid={true}
+    helper_text="Please select a user."
+  />
+</div>
+
+<h2>Disabled</h2>
+<div class="preview">
+  <.autocomplete
+    class="w-[400px]"
+    id="user"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    disabled={true}
+  />
+</div>
