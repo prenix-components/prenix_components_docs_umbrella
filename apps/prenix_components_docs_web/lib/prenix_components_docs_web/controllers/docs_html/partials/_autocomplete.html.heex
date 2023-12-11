@@ -23,6 +23,20 @@
   />
 </div>
 
+<h2>Tags Input With Placeholder</h2>
+<div class="preview">
+  <.autocomplete
+    base_class="w-[400px] max-w-full"
+    id="user"
+    name="user"
+    label_text="User"
+    type="tags"
+    placeholder="Add users"
+    options={@options |> Enum.map(fn x -> x.name end)}
+    value={["Jacob"]}
+  />
+</div>
+
 <h2>With Selected</h2>
 <div class="preview">
   <.autocomplete

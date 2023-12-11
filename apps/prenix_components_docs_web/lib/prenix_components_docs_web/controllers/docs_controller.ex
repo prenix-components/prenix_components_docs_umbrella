@@ -25,10 +25,6 @@ defmodule PrenixComponentsDocsWeb.DocsController do
     render(conn, page_title: "Autocomplete", options: options, options_2: options_2)
   end
 
-  def badge_show(conn, _params) do
-    render(conn, page_title: "Badge")
-  end
-
   def button_show(conn, _params) do
     render(conn, page_title: "Button")
   end
@@ -47,6 +43,10 @@ defmodule PrenixComponentsDocsWeb.DocsController do
     ]
 
     render(conn, page_title: "Checkbox Group", options: options)
+  end
+
+  def chip_show(conn, _params) do
+    render(conn, page_title: "Chip")
   end
 
   def datepicker_show(conn, _params) do

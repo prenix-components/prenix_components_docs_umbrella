@@ -1,7 +1,7 @@
 <h2>Basic</h2>
 
 <div class="preview">
-  <.checkbox id="basic" name="basic" value="1" label_text="Basic" />
+  <.checkbox id={"basic-#{@dark}"} name="basic" value="1" label_text="Basic" />
 </div>
 
 <h2>Checked</h2>
@@ -23,12 +23,12 @@
 
 <h2>Invalid</h2>
 <div class="preview">
-  <.checkbox id="invalid" name="invalid" value="1" label_text="Invalid" invalid />
+  <.checkbox name="invalid" value="1" label_text="Invalid" invalid />
 </div>
 
 <h2>Disabled</h2>
 <div class="preview">
-  <.checkbox id="disabled" name="disabled" value="1" label_text="Disabled" disabled />
+  <.checkbox name="disabled" value="1" label_text="Disabled" disabled />
 
-  <.checkbox id="disabled-2" name="disabled-2" value="1" label_text="Disabled" checked disabled />
+  <.checkbox name="disabled-2" value="1" label_text="Disabled" checked disabled />
 </div>

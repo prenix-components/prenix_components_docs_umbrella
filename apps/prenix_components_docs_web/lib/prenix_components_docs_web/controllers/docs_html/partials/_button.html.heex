@@ -36,10 +36,6 @@
   <.button color="danger" variant="outline">Danger</.button>
 </div>
 
-<.button variant="ghost" size="sm" rounded icon>
-  <.icon name="hero-x-mark-mini" />
-</.button>
-
 <h3>Ghost</h3>
 <div class="preview">
   <.button variant="ghost">Default</.button>
@@ -50,9 +46,12 @@
   <.button color="danger" variant="ghost">Danger</.button>
 </div>
 
-<h2>Rounded</h2>
+<h2>Radius</h2>
 <div class="preview">
-  <.button rounded>Rounded</.button>
+  <.button radius="sm">Small</.button>
+  <.button radius="md">Medium</.button>
+  <.button>Large</.button>
+  <.button radius="full">Full</.button>
 </div>
 
 <h2>Disabled</h2>
@@ -101,15 +100,15 @@
     <.icon name="hero-information-circle-mini" />
   </.button>
 
-  <.button color="primary" size="sm" icon rounded>
+  <.button color="primary" size="sm" icon radius="full">
     <.icon name="hero-information-circle-mini" />
   </.button>
 
-  <.button color="secondary" size="md" icon rounded>
+  <.button color="secondary" size="md" icon radius="full">
     <.icon name="hero-information-circle-mini" />
   </.button>
 
-  <.button color="success" size="lg" icon rounded>
+  <.button color="success" size="lg" icon radius="full">
     <.icon name="hero-information-circle-mini" />
   </.button>
 </div>

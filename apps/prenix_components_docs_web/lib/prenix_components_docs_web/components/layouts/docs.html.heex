@@ -3,7 +3,7 @@
     <div class="grid grid-cols-4 gap-8">
       <div class="col-span-1">
         <h4>Components</h4>
-        <%= for x <- ~w[autocomplete badge button checkbox_group checkbox dropdown icon input modal spinner table tooltip] do %>
+        <%= for x <- ~w[autocomplete button checkbox_group checkbox chip dropdown icon input modal spinner table tooltip] do %>
           <.link class="block" href={~p"/docs/#{x}"}>
             <%= x |> String.split("_") |> Enum.join(" ") |> String.capitalize() %>
           </.link>
