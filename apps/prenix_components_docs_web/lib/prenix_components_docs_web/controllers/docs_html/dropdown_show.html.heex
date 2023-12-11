@@ -1,5 +1,4 @@
 <h2>Default</h2>
-
 <div class="preview">
   <.dropdown>
     <:toggle>
@@ -9,9 +8,46 @@
     </:toggle>
 
     <:menu>
-      <.dropdown_item>Profile</.dropdown_item>
-      <.dropdown_item>Billing</.dropdown_item>
-      <.dropdown_item>Settings</.dropdown_item>
+      <.dropdown_item>Level 1</.dropdown_item>
+      <.dropdown_item>Level 1</.dropdown_item>
+    </:menu>
+  </.dropdown>
+</div>
+
+<h2>Multi Level</h2>
+<div class="preview">
+  <.dropdown>
+    <:toggle>
+      <.button>
+        Nested
+      </.button>
+    </:toggle>
+
+    <:menu>
+      <.dropdown_item>Level 1</.dropdown_item>
+      <.dropdown_item>Level 1</.dropdown_item>
+
+      <.dropdown_item type="submenu" color="primary">
+        <.dropdown submenu={true}>
+          <:toggle>Submenu Level 1</:toggle>
+
+          <:menu>
+            <.dropdown_item>Level 2</.dropdown_item>
+            <.dropdown_item>Level 2</.dropdown_item>
+            <.dropdown_item type="submenu">
+              <.dropdown submenu={true} variant="soft">
+                <:toggle>Submenu Level 1</:toggle>
+
+                <:menu>
+                  <.dropdown_item color="primary">Level 2</.dropdown_item>
+                  <.dropdown_item color="secondary">Level 2</.dropdown_item>
+                  <.dropdown_item color="success">Level 2</.dropdown_item>
+                </:menu>
+              </.dropdown>
+            </.dropdown_item>
+          </:menu>
+        </.dropdown>
+      </.dropdown_item>
     </:menu>
   </.dropdown>
 </div>

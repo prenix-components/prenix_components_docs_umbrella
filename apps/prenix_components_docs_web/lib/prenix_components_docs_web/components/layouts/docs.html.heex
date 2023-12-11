@@ -1,9 +1,22 @@
 <main class="container container-y">
   <div class="doc">
-    <h1>
-      <%= @page_title %>
-    </h1>
+    <div class="grid grid-cols-4 gap-8">
+      <div class="col-span-1">
+        <h4>Components</h4>
+        <%= for x <- ~w[autocomplete badge button checkbox_group checkbox dropdown icon input modal spinner table tooltip] do %>
+          <.link class="block" href={~p"/docs/#{x}"}>
+            <%= x |> String.split("_") |> Enum.join(" ") |> String.capitalize() %>
+          </.link>
+        <% end %>
+      </div>
 
-    <%= @inner_content %>
+      <div class="col-span-3">
+        <h1>
+          <%= @page_title %>
+        </h1>
+
+        <%= @inner_content %>
+      </div>
+    </div>
   </div>
 </main>

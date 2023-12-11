@@ -22,13 +22,10 @@ import { Socket } from 'phoenix'
 import { LiveSocket } from 'phoenix_live_view'
 import topbar from '../vendor/topbar'
 import {
-  TomSelect,
-  bootstrap,
-  autoInit,
+  prenixModules, autoInit
 } from '../../../prenix_components/assets/js/prenix_components'
 
-console.log({ TomSelect })
-console.log({ bootstrap })
+console.log({ prenixModules })
 console.log({ autoInit })
 
 let csrfToken = document

@@ -4,8 +4,6 @@
 
 @import '../../../prenix_components/assets/css/prenix_components.css';
 
-/* @import '../node_modules/bootstrap/dist/css/bootstrap.css'; */
-
 /* This file is for your main application CSS */
 @layer components {
   .preview {
@@ -30,5 +28,9 @@
 } */
 
 .preview.dark {
+  background: black;
+}
+
+.dark {
   background: black;
 }

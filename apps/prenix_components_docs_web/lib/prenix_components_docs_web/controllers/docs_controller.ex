@@ -49,16 +49,20 @@ defmodule PrenixComponentsDocsWeb.DocsController do
     render(conn, page_title: "Checkbox Group", options: options)
   end
 
+  def datepicker_show(conn, _params) do
+    render(conn, page_title: "Datepicker")
+  end
+
   def dropdown_show(conn, _params) do
     render(conn, page_title: "Dropdown")
   end
 
-  def field_show(conn, _params) do
-    render(conn, page_title: "Field")
-  end
-
   def icon_show(conn, _params) do
     render(conn, page_title: "Icon")
+  end
+
+  def input_show(conn, _params) do
+    render(conn, page_title: "Input")
   end
 
   def modal_show(conn, _params) do

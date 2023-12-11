@@ -1,0 +1,79 @@
+<h2>Basic</h2>
+<div class="preview">
+  <.checkbox_group
+    name="cities"
+    id="cities"
+    label_text="Select Cities"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+  />
+</div>
+
+<h2>With Value</h2>
+<div class="preview">
+  <.checkbox_group
+    name="cities"
+    id="cities"
+    label_text="Select Cities"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    value={[1, 3, 5]}
+  />
+</div>
+
+<h2>With Custom Label</h2>
+<div class="preview">
+  <.checkbox_group
+    name="cities"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+  >
+    <:label>
+      <.icon name="hero-building-library" /> Select Cities
+    </:label>
+  </.checkbox_group>
+</div>
+
+<h2>With Helper Text</h2>
+<div class="preview">
+  <.checkbox_group
+    name="cities"
+    label_text="Select Cities"
+    helper_text="Select the cities you want to visit."
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+  />
+</div>
+
+<h2>With Custom Helper Text</h2>
+<div class="preview">
+  <.checkbox_group
+    name="cities"
+    label_text="Select Cities"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+  >
+    <:helper>
+      <.icon name="hero-building-library" /> Select Cities
+
+      Select the cities you want to visit.
+    </:helper>
+  </.checkbox_group>
+</div>
+
+<h2>With Error</h2>
+<div class="preview">
+  <.checkbox_group
+    name="cities"
+    label_text="Select Cities"
+    helper_text="Please select a city."
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    invalid={true}
+  />
+</div>
+
+<h2>Disabled</h2>
+<div class="preview">
+  <.checkbox_group
+    name="cities"
+    id="cities"
+    label_text="Select Cities"
+    disabled
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+  />
+</div>

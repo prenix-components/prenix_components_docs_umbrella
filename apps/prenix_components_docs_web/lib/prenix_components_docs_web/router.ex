@@ -33,9 +33,10 @@ defmodule PrenixComponentsDocsWeb.Router do
     get "/button", DocsController, :button_show
     get "/checkbox", DocsController, :checkbox_show
     get "/checkbox_group", DocsController, :checkbox_group_show
+    get "/datepicker", DocsController, :datepicker_show
     get "/dropdown", DocsController, :dropdown_show
-    get "/field", DocsController, :field_show
     get "/icon", DocsController, :icon_show
+    get "/input", DocsController, :input_show
     get "/modal", DocsController, :modal_show
     get "/spinner", DocsController, :spinner_show
     get "/table", DocsController, :table_show
