@@ -1,197 +1,37 @@
-<h2>Default</h2>
-<div class="preview">
-  <.dropdown>
-    <:toggle>
-      <.button>
-        Dropdown
-      </.button>
-    </:toggle>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div>
+    <._dropdown dark={false} {assigns} />
+  </div>
 
-    <:menu>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-    </:menu>
-  </.dropdown>
+  <div class="dark">
+    <._dropdown dark={true} {assigns} />
+  </div>
 </div>
 
-<h2>Multi Level</h2>
-<div class="preview">
-  <.dropdown>
-    <:toggle>
-      <.button>
-        Nested
-      </.button>
-    </:toggle>
-
-    <:menu>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-
-      <.dropdown_item type="submenu" color="primary">
-        <.dropdown submenu={true}>
-          <:toggle>Submenu Level 1</:toggle>
-
-          <:menu>
-            <.dropdown_item>Level 2</.dropdown_item>
-            <.dropdown_item>Level 2</.dropdown_item>
-            <.dropdown_item type="submenu">
-              <.dropdown submenu={true} variant="soft">
-                <:toggle>Submenu Level 1</:toggle>
-
-                <:menu>
-                  <.dropdown_item color="primary">Level 2</.dropdown_item>
-                  <.dropdown_item color="secondary">Level 2</.dropdown_item>
-                  <.dropdown_item color="success">Level 2</.dropdown_item>
-                </:menu>
-              </.dropdown>
-            </.dropdown_item>
-          </:menu>
-        </.dropdown>
-      </.dropdown_item>
-    </:menu>
-  </.dropdown>
-</div>
-
-<h2>With Caret</h2>
-<div class="preview">
-  <.dropdown>
-    <:toggle>
-      <.button>
-        Dropdown <.dropdown_rotate />
-      </.button>
-    </:toggle>
-
-    <:menu>
-      <.dropdown_item type="button">Profile</.dropdown_item>
-      <.dropdown_item type="button">Billing</.dropdown_item>
-      <.dropdown_item type="button">Settings</.dropdown_item>
-    </:menu>
-  </.dropdown>
-</div>
-
-<h2>With Custom Caret</h2>
-<div class="preview">
-  <.dropdown>
-    <:toggle>
-      <.button>
-        Dropdown
-        <.dropdown_rotate>
-          <.icon name="hero-plus-mini" />
-        </.dropdown_rotate>
-      </.button>
-    </:toggle>
-
-    <:menu>
-      <.dropdown_item type="button">Profile</.dropdown_item>
-      <.dropdown_item type="button">Billing</.dropdown_item>
-      <.dropdown_item type="button">Settings</.dropdown_item>
-    </:menu>
-  </.dropdown>
-</div>
-
-<h2>Variants</h2>
-<h3>Solid</h3>
-<div class="preview">
-  <.dropdown variant="solid">
-    <:toggle>
-      <.button>Dropdown</.button>
-    </:toggle>
-
-    <:menu>
-      <.dropdown_item type="button">Default</.dropdown_item>
-      <.dropdown_item type="button" color="primary">Primary</.dropdown_item>
-      <.dropdown_item type="button" color="secondary">Secondary</.dropdown_item>
-      <.dropdown_item type="button" color="success">Success</.dropdown_item>
-      <.dropdown_item type="button" color="warning">Warning</.dropdown_item>
-      <.dropdown_item type="button" color="danger">Danger</.dropdown_item>
-    </:menu>
-  </.dropdown>
-</div>
-
-<h3>Soft</h3>
-<div class="preview">
-  <.dropdown variant="soft">
-    <:toggle>
-      <.button>Dropdown</.button>
-    </:toggle>
-
-    <:menu>
-      <.dropdown_item type="button">Default</.dropdown_item>
-      <.dropdown_item type="button" color="primary">Primary</.dropdown_item>
-      <.dropdown_item type="button" color="secondary">Secondary</.dropdown_item>
-      <.dropdown_item type="button" color="success">Success</.dropdown_item>
-      <.dropdown_item type="button" color="warning">Warning</.dropdown_item>
-      <.dropdown_item type="button" color="danger">Danger</.dropdown_item>
-    </:menu>
-  </.dropdown>
-</div>
-
-<h3>With Divider</h3>
-<div class="preview">
-  <.dropdown>
-    <:toggle>
-      <.button>
-        Dropdown
-      </.button>
-    </:toggle>
-
-    <:menu>
-      <.dropdown_item type="button">Profile</.dropdown_item>
-      <.dropdown_divider />
-      <.dropdown_item type="button">Billing</.dropdown_item>
-      <.dropdown_item type="button">Settings</.dropdown_item>
-    </:menu>
-  </.dropdown>
-</div>
-
-<h2>With Icons</h2>
-<div class="preview">
-  <.dropdown>
-    <:toggle>
-      <.button>
-        Dropdown
-      </.button>
-    </:toggle>
-
-    <:menu>
-      <.dropdown_item type="button">
-        <:start_content>
-          <.icon name="hero-currency-dollar" size="sm" />
-        </:start_content>
-        Profile
-        <:end_content>
-          <.icon name="hero-currency-dollar" size="sm" />
-        </:end_content>
-      </.dropdown_item>
-      <.dropdown_item type="button">
-        Billing
-      </.dropdown_item>
-      <.dropdown_divider />
-
-      <.dropdown_item type="button" color="danger">
-        <span class="text-danger">Log Out</span>
-        <:end_content>
-          <.icon name="hero-arrow-right-on-rectangle" size="sm" />
-        </:end_content>
-      </.dropdown_item>
-    </:menu>
-  </.dropdown>
-</div>
-
-<h2>With Disabled</h2>
-<div class="preview">
-  <.dropdown>
-    <:toggle>
-      <.button>
-        Dropdown
-      </.button>
-    </:toggle>
-
-    <:menu>
-      <.dropdown_item>Profile</.dropdown_item>
-      <.dropdown_item>Billing</.dropdown_item>
-      <.dropdown_item href="/" disabled>Settings</.dropdown_item>
-      <.dropdown_item type="button" disabled>Disabled button</.dropdown_item>
-    </:menu>
-  </.dropdown>
+<p class="d-inline-flex gap-1">
+  <a
+    class="btn btn-primary"
+    data-bs-toggle="collapse"
+    href="#collapseExample"
+    role="button"
+    aria-expanded="false"
+    aria-controls="collapseExample"
+  >
+    Link with href
+  </a>
+  <button
+    class="btn btn-primary"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#collapseExample"
+    aria-expanded="false"
+    aria-controls="collapseExample"
+  >
+    Button with data-bs-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+  </div>
 </div>

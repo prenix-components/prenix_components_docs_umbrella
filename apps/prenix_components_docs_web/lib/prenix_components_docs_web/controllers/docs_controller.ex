@@ -1,6 +1,10 @@
 defmodule PrenixComponentsDocsWeb.DocsController do
   use PrenixComponentsDocsWeb, :controller
 
+  def accordion_show(conn, _params) do
+    render(conn, page_title: "Accordion")
+  end
+
   def autocomplete_show(conn, _params) do
     options = [
       %{id: 1, name: "Mark"},
@@ -67,6 +71,10 @@ defmodule PrenixComponentsDocsWeb.DocsController do
 
   def modal_show(conn, _params) do
     render(conn, page_title: "Modal")
+  end
+
+  def popover_show(conn, _params) do
+    render(conn, page_title: "Popover")
   end
 
   def spinner_show(conn, _params) do

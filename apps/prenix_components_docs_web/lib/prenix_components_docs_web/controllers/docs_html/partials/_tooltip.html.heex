@@ -1,0 +1,84 @@
+<h2>Colors</h2>
+
+<div id="calendar"></div>
+
+<div class="preview">
+  <.tooltip title="This is a tooltip" tooltip_class={if(@dark, do: "dark", else: "")}>
+    <.button>Default</.button>
+  </.tooltip>
+
+  <.tooltip color="primary" title="This is a tooltip">
+    <.button>Primary</.button>
+  </.tooltip>
+
+  <.tooltip color="secondary" title="This is a tooltip">
+    <.button>Secondary</.button>
+  </.tooltip>
+
+  <.tooltip color="success" title="This is a tooltip">
+    <.button>Success</.button>
+  </.tooltip>
+
+  <.tooltip color="warning" title="This is a tooltip">
+    <.button>Warning</.button>
+  </.tooltip>
+
+  <.tooltip color="danger" title="This is a tooltip">
+    <.button>Danger</.button>
+  </.tooltip>
+</div>
+
+<h2>No Arrow</h2>
+<div class="preview">
+  <.tooltip title="This is a tooltip" rrow={false} tooltip_class={if(@dark, do: "dark", else: "")}>
+    <.button>Default</.button>
+  </.tooltip>
+
+  <.tooltip color="primary" title="This is a tooltip" arrow={false}>
+    <.button>Primary</.button>
+  </.tooltip>
+
+  <.tooltip color="secondary" title="This is a tooltip" arrow={false}>
+    <.button>Secondary</.button>
+  </.tooltip>
+
+  <.tooltip color="success" title="This is a tooltip" arrow={false}>
+    <.button>Success</.button>
+  </.tooltip>
+
+  <.tooltip color="warning" title="This is a tooltip" arrow={false}>
+    <.button>Warning</.button>
+  </.tooltip>
+
+  <.tooltip color="danger" title="This is a tooltip" arrow={false}>
+    <.button>Danger</.button>
+  </.tooltip>
+</div>
+
+<h2>Placements</h2>
+<div class="preview">
+  <.tooltip title="This is a tooltip">
+    <.button>Top</.button>
+  </.tooltip>
+
+  <.tooltip color="primary" placement="bottom" title="This is a tooltip">
+    <.button>Bottom</.button>
+  </.tooltip>
+
+  <.tooltip color="secondary" placement="left" title="This is a tooltip">
+    <.button>Left</.button>
+  </.tooltip>
+
+  <.tooltip color="success" placement="right" title="This is a tooltip">
+    <.button>Right</.button>
+  </.tooltip>
+</div>
+
+<h2>Link</h2>
+
+<div class="preview">
+  <p>
+    This is a tooltip
+    <.tooltip title="This is a tooltip"><a href="#">link</a></.tooltip>.
+  </p>
+</div>

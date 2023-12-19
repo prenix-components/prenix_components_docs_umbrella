@@ -1,4 +1,4 @@
-<h2></h2>
+<h2>Default</h2>
 <div class="preview">
   <.table rows={@users}>
     <:header>#</:header>
@@ -19,23 +19,82 @@
         </:toggle>
 
         <:menu>
-          <.dropdown_item>Profile</.dropdown_item>
-          <.dropdown_item>Billing</.dropdown_item>
-          <.dropdown_item>Settings</.dropdown_item>
-          <.dropdown_item>Profile</.dropdown_item>
-          <.dropdown_item>Billing</.dropdown_item>
-          <.dropdown_item>Settings</.dropdown_item>
-          <.dropdown_item>Profile</.dropdown_item>
-          <.dropdown_item>Billing</.dropdown_item>
-          <.dropdown_item>Settings</.dropdown_item>
+          <.dropdown_item>Level 1</.dropdown_item>
+          <.dropdown_item>Level 1</.dropdown_item>
+          <.dropdown_item>Level 1</.dropdown_item>
+          <.dropdown_item>Level 1</.dropdown_item>
+          <.dropdown_item>Level 1</.dropdown_item>
+          <.dropdown_item>Level 1</.dropdown_item>
+          <.dropdown_item>Level 1</.dropdown_item>
+          <.dropdown_item>Level 1</.dropdown_item>
+          <.dropdown_item>Level 1</.dropdown_item>
+          <.dropdown_item>Level 1</.dropdown_item>
+        </:menu>
+      </.dropdown>
+
+      <.dropdown>
+        <:toggle>
+          <.button>
+            Nested
+          </.button>
+        </:toggle>
+
+        <:menu>
+          <.dropdown_item>Level 1</.dropdown_item>
+          <.dropdown_item>Level 1</.dropdown_item>
+
+          <.dropdown submenu={true}>
+            <:toggle>
+              <.dropdown_item submenu={true} color="primary">Open Level 2</.dropdown_item>
+            </:toggle>
+
+            <:menu>
+              <.dropdown_item>Level 2</.dropdown_item>
+              <.dropdown_item>Level 2</.dropdown_item>
+              <.dropdown submenu={true} variant="soft">
+                <:toggle>
+                  <.dropdown_item submenu={true}>Open Level 3</.dropdown_item>
+                </:toggle>
+
+                <:menu>
+                  <.dropdown_item color="primary">Level 3</.dropdown_item>
+                  <.dropdown_item color="secondary">Level 3</.dropdown_item>
+                  <.dropdown_item color="success">Level 3</.dropdown_item>
+                </:menu>
+              </.dropdown>
+            </:menu>
+          </.dropdown>
         </:menu>
       </.dropdown>
     </:col>
   </.table>
 </div>
 
+<div class="dark preview">
+  <.table rows={@users}>
+    <:header>#</:header>
+    <:header>First</:header>
+    <:header>Last</:header>
+    <:header>Handle</:header>
+
+    <:col :let={user}><%= user.id %></:col>
+    <:col :let={user}><%= user.first %></:col>
+    <:col :let={user}><%= user.last %></:col>
+    <:col :let={user}><%= user.handle %></:col>
+  </.table>
+</div>
+
 <h2>Empty State</h2>
 <div class="preview">
+  <.table rows={[]}>
+    <:header>#</:header>
+    <:header>First</:header>
+    <:header>Last</:header>
+    <:header>Handle</:header>
+  </.table>
+</div>
+
+<div class="preview dark">
   <.table rows={[]}>
     <:header>#</:header>
     <:header>First</:header>

@@ -28,6 +28,7 @@ defmodule PrenixComponentsDocsWeb.Router do
   scope "/docs", PrenixComponentsDocsWeb do
     pipe_through :docs
 
+    get "/accordion", DocsController, :accordion_show
     get "/autocomplete", DocsController, :autocomplete_show
     get "/button", DocsController, :button_show
     get "/checkbox", DocsController, :checkbox_show
@@ -38,6 +39,7 @@ defmodule PrenixComponentsDocsWeb.Router do
     get "/icon", DocsController, :icon_show
     get "/input", DocsController, :input_show
     get "/modal", DocsController, :modal_show
+    get "/popover", DocsController, :popover_show
     get "/spinner", DocsController, :spinner_show
     get "/table", DocsController, :table_show
     get "/tooltip", DocsController, :tooltip_show
