@@ -1,16 +1,16 @@
 <h2>Basic</h2>
 <div class="preview">
-  <.input id="email" name="email" label_text="Email" base_class="w-[400px]" />
+  <.input id="email" name="email" label_text="Email" class="w-[400px]" />
 </div>
 
 <h2>With Value</h2>
 <div class="preview">
-  <.input name="email" label_text="Email" base_class="w-[400px]" value="admin@example.com" />
+  <.input name="email" label_text="Email" class="w-[400px]" value="admin@example.com" />
 </div>
 
 <h2>With Custom Label</h2>
 <div class="preview">
-  <.input name="email" base_class="w-[400px]">
+  <.input name="email" class="w-[400px]">
     <:label>
       <.icon name="ion-mail" /> Email
     </:label>
@@ -19,7 +19,7 @@
 
 <h2>With No Label</h2>
 <div class="preview">
-  <.input name="email" base_class="w-[400px]" />
+  <.input name="email" class="w-[400px]" />
 </div>
 
 <h2>With Placeholder</h2>
@@ -28,7 +28,7 @@
     id="email"
     name="email"
     label_text="Email"
-    base_class="w-[400px]"
+    class="w-[400px]"
     placeholder="john.doe@example.com"
   />
 </div>
@@ -39,7 +39,7 @@
     id="email"
     name="email"
     label_text="Email"
-    base_class="w-[400px]"
+    class="w-[400px]"
     placeholder="john.doe@example.com"
     helper_text="We'll never share your email with anyone else."
   />
@@ -51,7 +51,7 @@
     id="email"
     name="email"
     label_text="Email"
-    base_class="w-[400px]"
+    class="w-[400px]"
     placeholder="john.doe@example.com"
   >
     <:helper>
@@ -67,7 +67,7 @@
     id="email"
     name="email"
     label_text="Email"
-    base_class="w-[400px]"
+    class="w-[400px]"
     placeholder="john.doe@example.com"
     helper_text="Please enter a valid email."
     invalid={true}
@@ -80,7 +80,7 @@
     id="email"
     name="email"
     label_text="Email"
-    base_class="w-[400px]"
+    class="w-[400px]"
     placeholder="john.doe@example.com"
     helper_text="Please enter a valid email."
     disabled={true}

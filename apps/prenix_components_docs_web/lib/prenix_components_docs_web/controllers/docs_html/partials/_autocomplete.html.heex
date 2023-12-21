@@ -1,7 +1,7 @@
 <h2>Basic</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     id="user"
     name="user"
     label_text="User"
@@ -13,7 +13,7 @@
 <h2>Tags Input</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     id="user"
     name="user"
     label_text="User"
@@ -26,7 +26,7 @@
 <h2>Tags Input With Placeholder</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     id="user"
     name="user"
     label_text="User"
@@ -40,7 +40,7 @@
 <h2>With Selected</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     name="user"
     label_text="User"
     options={Enum.map(@options_2, fn x -> %{value: x.id, name: x.name} end)}
@@ -51,7 +51,7 @@
 <h2>With Blank Option</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     name="user"
     label_text="User"
     allow_blank
@@ -62,7 +62,7 @@
 <h2>With Blank Option and Placeholder</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     name="user"
     label_text="User"
     allow_blank
@@ -74,7 +74,7 @@
 <h2>With Disabled Option</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     name="user"
     label_text="User"
     value={1}
@@ -85,7 +85,7 @@
 <h2>With Option Template</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     name="country"
     label_text="Country"
     options={[
@@ -132,7 +132,7 @@
 <h2>With No Label</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     name="user"
     options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
   />
@@ -141,7 +141,7 @@
 <h2>With Custom Label</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     name="user"
     options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
   >
@@ -154,7 +154,7 @@
 <h2>With Placeholder</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     name="user"
     label_text="User"
     placeholder="Select a user"
@@ -165,7 +165,7 @@
 <h2>With Helper Text</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     name="user"
     label_text="User"
     options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
@@ -176,7 +176,7 @@
 <h2>With Custom Helper Text</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     name="user"
     label_text="User"
     options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
@@ -191,7 +191,7 @@
 <h2>With Error</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     name="user"
     label_text="User"
     options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
@@ -203,7 +203,7 @@
 <h2>Disabled</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     name="user"
     label_text="User"
     options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
@@ -214,7 +214,7 @@
 <h2>Multiple Selection</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     name="user"
     label_text="User"
     type="multiple"
@@ -226,7 +226,7 @@
 <h2>Multiple Selection With Template</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     type="multiple"
     value={[1]}
     options={Enum.map(@options_2, fn x -> %{value: x.id, name: x.name, disabled: x.id == 2} end)}
@@ -276,7 +276,7 @@
 <h2>Multiple Selection With Selected</h2>
 <div class="preview">
   <.autocomplete
-    base_class="w-[400px] max-w-full"
+    class="w-[400px] max-w-full"
     name="user"
     label_text="User"
     type="multiple"
