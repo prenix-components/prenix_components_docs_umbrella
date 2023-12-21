@@ -12,6 +12,8 @@ module.exports = {
     '../lib/prenix_components_docs_web/**/*.*ex',
     '../../prenix_components/lib/**/*.*ex',
     '../../prenix_components/assets/css/**/*.css',
+    '../../prenix_components/assets/js/**/*.js',
+    '../../prenix_components/vendors/**/*.js',
   ],
   theme: {
     extend: {
@@ -59,34 +61,28 @@ module.exports = {
       ]),
     ),
 
-    // Embeds Heroicons (https://heroicons.com) into your app.css bundle
-    // See your `CoreComponents.icon/1` for more information.
-    //
     plugin(function ({ matchComponents, theme }) {
-      let iconsDir = path.join(__dirname, './vendor/heroicons/optimized')
+      console.log('matchComponents', matchComponents)
+      let iconsDir = path.join(__dirname, './node_modules/ionicons/dist/svg')
       let values = {}
-      let icons = [
-        ['', '/24/outline'],
-        ['-solid', '/24/solid'],
-        ['-mini', '/20/solid'],
-      ]
-      icons.forEach(([suffix, dir]) => {
-        fs.readdirSync(path.join(iconsDir, dir)).forEach((file) => {
-          let name = path.basename(file, '.svg') + suffix
-          values[name] = { name, fullPath: path.join(iconsDir, dir, file) }
-        })
+
+      fs.readdirSync(path.join(iconsDir)).forEach((file) => {
+        let name = path.basename(file, '.svg')
+        values[name] = { name, fullPath: path.join(iconsDir, file) }
       })
+
       matchComponents(
         {
-          hero: ({ name, fullPath }) => {
+          ion: ({ name, fullPath }) => {
             let content = fs
               .readFileSync(fullPath)
               .toString()
               .replace(/\r?\n|\r/g, '')
+
             return {
-              [`--hero-${name}`]: `url('data:image/svg+xml;utf8,${content}')`,
-              '-webkit-mask': `var(--hero-${name})`,
-              mask: `var(--hero-${name})`,
+              [`--ion-${name}`]: `url('data:image/svg+xml;utf8,${content}')`,
+              '-webkit-mask': `var(--ion-${name})`,
+              mask: `var(--ion-${name})`,
               'mask-repeat': 'no-repeat',
               'background-color': 'currentColor',
               'vertical-align': 'middle',

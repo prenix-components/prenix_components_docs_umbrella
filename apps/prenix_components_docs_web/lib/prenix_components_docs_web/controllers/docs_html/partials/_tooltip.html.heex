@@ -30,7 +30,11 @@
 
 <h2>No Arrow</h2>
 <div class="preview">
-  <.tooltip title="This is a tooltip" rrow={false} tooltip_class={if(@dark, do: "dark", else: "")}>
+  <.tooltip
+    title="This is a tooltip"
+    arrow={false}
+    tooltip_class={if(@dark, do: "dark", else: "")}
+  >
     <.button>Default</.button>
   </.tooltip>
 
