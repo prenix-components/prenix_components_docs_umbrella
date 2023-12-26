@@ -39,7 +39,6 @@ defmodule PrenixComponentsDocsWeb.Router do
     get "/icon", DocsController, :icon_show
     get "/input", DocsController, :input_show
     get "/modal", DocsController, :modal_show
-    get "/popover", DocsController, :popover_show
     get "/spinner", DocsController, :spinner_show
     get "/table", DocsController, :table_show
     get "/tooltip", DocsController, :tooltip_show

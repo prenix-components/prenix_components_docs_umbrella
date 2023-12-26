@@ -5,9 +5,303 @@
     id="user"
     name="user"
     label_text="User"
-    input_class="text-red-500"
     options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
   />
+</div>
+
+<h2>Sizes</h2>
+<div class="preview">
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="sm"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="lg"
+  />
+</div>
+
+<h2>Outside Label Placements</h2>
+<div class="preview">
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="sm"
+    label_placement="outside"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    label_placement="outside"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="lg"
+    label_placement="outside"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="sm"
+    label_placement="outside-left"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    label_placement="outside-left"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="lg"
+    label_placement="outside-left"
+  />
+</div>
+
+<h2>Outside Label Placements</h2>
+<div class="preview">
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="sm"
+    label_placement="outside"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    label_placement="outside"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="lg"
+    label_placement="outside"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="sm"
+    label_placement="outside-left"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    label_placement="outside-left"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="lg"
+    label_placement="outside-left"
+  />
+</div>
+
+<h2>Outside Label Placements With Helper</h2>
+<div class="preview">
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="sm"
+    label_placement="outside"
+    helper_text="Please select a user"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    label_placement="outside"
+    helper_text="Please select a user"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="lg"
+    label_placement="outside"
+    helper_text="Please select a user"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="sm"
+    label_placement="outside-left"
+    helper_text="Please select a user"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    label_placement="outside-left"
+    helper_text="Please select a user"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="lg"
+    label_placement="outside-left"
+    helper_text="Please select a user"
+  />
+</div>
+
+<h2>Outside Label Placements With Placeholder</h2>
+<div class="preview">
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="sm"
+    label_placement="outside"
+    placeholder="Select user"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    label_placement="outside"
+    placeholder="Select user"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="lg"
+    label_placement="outside"
+    placeholder="Select user"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="sm"
+    label_placement="outside-left"
+    placeholder="Select user"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    label_placement="outside-left"
+    placeholder="Select user"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    size="lg"
+    label_placement="outside-left"
+    placeholder="Select user"
+  />
+</div>
+
+<h2>Start and End Content</h2>
+<div class="preview">
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+  >
+    <:start_content>
+      <.icon name="ion-mail-outline" class="text-gray-400" />
+    </:start_content>
+  </.autocomplete>
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    label_placement="outside"
+  >
+    <:start_content>
+      <.icon name="ion-mail-outline" class="text-gray-400" />
+    </:start_content>
+  </.autocomplete>
+
+  <.autocomplete
+    label_placement="outside-left"
+    class="w-[400px] max-w-full"
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+  >
+    <:end_content>
+      <span class="text-gray-400">$</span>
+    </:end_content>
+  </.autocomplete>
 </div>
 
 <h2>Tags Input</h2>
@@ -20,6 +314,98 @@
     type="tags"
     options={@options |> Enum.map(fn x -> x.name end)}
     value={["Jacob"]}
+    size="sm"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    id="user"
+    name="user"
+    label_text="User"
+    type="tags"
+    options={@options |> Enum.map(fn x -> x.name end)}
+    value={["Jacob"]}
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    id="user"
+    name="user"
+    label_text="User"
+    type="tags"
+    options={@options |> Enum.map(fn x -> x.name end)}
+    value={["Jacob"]}
+    size="lg"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    id="user"
+    name="user"
+    label_text="User"
+    type="tags"
+    options={@options |> Enum.map(fn x -> x.name end)}
+    value={["Jacob"]}
+    size="sm"
+    label_placement="outside"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    id="user"
+    name="user"
+    label_text="User"
+    type="tags"
+    options={@options |> Enum.map(fn x -> x.name end)}
+    value={["Jacob"]}
+    label_placement="outside"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    id="user"
+    name="user"
+    label_text="User"
+    type="tags"
+    options={@options |> Enum.map(fn x -> x.name end)}
+    value={["Jacob"]}
+    size="lg"
+    label_placement="outside"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    id="user"
+    name="user"
+    label_text="User"
+    type="tags"
+    options={@options |> Enum.map(fn x -> x.name end)}
+    value={["Jacob"]}
+    size="sm"
+    label_placement="outside-left"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    id="user"
+    name="user"
+    label_text="User"
+    type="tags"
+    options={@options |> Enum.map(fn x -> x.name end)}
+    value={["Jacob"]}
+    label_placement="outside-left"
+  />
+
+  <.autocomplete
+    class="w-[400px] max-w-full"
+    id="user"
+    name="user"
+    label_text="User"
+    type="tags"
+    options={@options |> Enum.map(fn x -> x.name end)}
+    value={["Jacob"]}
+    size="lg"
+    label_placement="outside-left"
   />
 </div>
 

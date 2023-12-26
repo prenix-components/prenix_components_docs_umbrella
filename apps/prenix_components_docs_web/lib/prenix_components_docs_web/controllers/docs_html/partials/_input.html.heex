@@ -8,6 +8,140 @@
   <.input name="email" label_text="Email" class="w-[400px]" value="admin@example.com" />
 </div>
 
+<h2>Sizes</h2>
+<div class="preview">
+  <.input name="email" label_text="Email" class="w-[400px]" size="sm" />
+  <.input name="email" label_text="Email" class="w-[400px]" />
+  <.input name="email" label_text="Email" class="w-[400px]" size="lg" />
+</div>
+
+<h2>Outside Label Placements</h2>
+<div class="preview">
+  <.input name="email" label_text="Email" class="w-[400px]" label_placement="outside" size="sm" />
+  <.input name="email" label_text="Email" class="w-[400px]" label_placement="outside" />
+  <.input name="email" label_text="Email" class="w-[400px]" label_placement="outside" size="lg" />
+
+  <.input
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    label_placement="outside-left"
+    size="sm"
+  />
+  <.input name="email" label_text="Email" class="w-[400px]" label_placement="outside-left" />
+  <.input
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    label_placement="outside-left"
+    size="lg"
+  />
+</div>
+
+<h2>Outside Label Placements With Placeholder</h2>
+<div class="preview">
+  <.input
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    label_placement="outside"
+    placeholder="john@example.com"
+    size="sm"
+  />
+  <.input
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    label_placement="outside"
+    placeholder="john@example.com"
+  />
+  <.input
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    label_placement="outside"
+    placeholder="john@example.com"
+    size="lg"
+  />
+
+  <.input
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    label_placement="outside-left"
+    placeholder="john@example.com"
+    size="sm"
+  />
+  <.input
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    label_placement="outside-left"
+    placeholder="john@example.com"
+  />
+  <.input
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    label_placement="outside-left"
+    placeholder="john@example.com"
+    size="lg"
+  />
+</div>
+
+<h2>Outside Label Placements With Helper</h2>
+<div class="preview">
+  <.input
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    label_placement="outside"
+    helper_text="Please enter your email"
+    size="sm"
+  />
+
+  <.input
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    label_placement="outside"
+    helper_text="Please enter your email"
+  />
+
+  <.input
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    label_placement="outside"
+    helper_text="Please enter your email"
+    size="lg"
+  />
+
+  <.input
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    label_placement="outside-left"
+    helper_text="Please enter your email"
+    size="sm"
+  />
+  <.input
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    label_placement="outside-left"
+    helper_text="Please enter your email"
+  />
+  <.input
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    label_placement="outside-left"
+    helper_text="Please enter your email"
+    size="lg"
+  />
+</div>
+
 <h2>With Custom Label</h2>
 <div class="preview">
   <.input name="email" class="w-[400px]">
@@ -55,7 +189,7 @@
     placeholder="john.doe@example.com"
   >
     <:helper>
-      <.icon name="exclamation-triangle" color="warning" />
+      <.icon name="ion-alert-circle-outline" color="warning" />
       We'll never share your email with anyone else.
     </:helper>
   </.input>
@@ -64,7 +198,6 @@
 <h2>With Error</h2>
 <div class="preview">
   <.input
-    id="email"
     name="email"
     label_text="Email"
     class="w-[400px]"
@@ -77,12 +210,135 @@
 <h2>Disabled</h2>
 <div class="preview">
   <.input
-    id="email"
     name="email"
     label_text="Email"
     class="w-[400px]"
     placeholder="john.doe@example.com"
     helper_text="Please enter a valid email."
     disabled={true}
+  />
+</div>
+
+<h2>Start and End Content</h2>
+<div class="preview">
+  <.input name="email" label_text="Email" class="w-[400px]" label_placement="outside">
+    <:start_content>
+      <.icon name="ion-mail-outline" class="text-gray-400" />
+    </:start_content>
+  </.input>
+
+  <.input name="price" label_text="Price" class="w-[400px]" label_placement="outside-left">
+    <:end_content>
+      <span class="text-gray-400">$</span>
+    </:end_content>
+  </.input>
+
+  <.input name="website" label_text="Website" class="w-[400px]" label_placement="outside">
+    <:start_content>
+      <span class="text-gray-400">https://</span>
+    </:start_content>
+
+    <:end_content>
+      <span class="text-neutral2-foreground">.org</span>
+    </:end_content>
+  </.input>
+
+  <.input name="price" label_text="Price" class="w-[400px]" label_placement="outside-left">
+    <:start_content>
+      <select
+        class="outline-none border-0 bg-transparent text-gray-400 text-sm"
+        id="currency"
+        name="currency"
+      >
+        <option>USD</option>
+        <option>ARS</option>
+        <option>EUR</option>
+      </select>
+    </:start_content>
+  </.input>
+</div>
+
+<h2>Textarea</h2>
+<div class="preview">
+  <.input name="description" label_text="Description" class="w-[400px]" size="sm" type="textarea" />
+  <.input name="description" label_text="Description" class="w-[400px]" type="textarea" />
+  <.input name="description" label_text="Description" class="w-[400px]" size="lg" type="textarea" />
+
+  <.input
+    name="description"
+    label_text="Description"
+    class="w-[400px]"
+    size="sm"
+    type="textarea"
+    placeholder="Enter your description"
+  />
+  <.input
+    name="description"
+    label_text="Description"
+    class="w-[400px]"
+    type="textarea"
+    placeholder="Enter your description"
+  />
+  <.input
+    name="description"
+    label_text="Description"
+    class="w-[400px]"
+    size="lg"
+    type="textarea"
+    placeholder="Enter your description"
+  />
+
+  <.input
+    name="description"
+    label_text="Description"
+    class="w-[400px]"
+    size="sm"
+    type="textarea"
+    placeholder="Enter your description"
+    label_placement="outside"
+  />
+  <.input
+    name="description"
+    label_text="Description"
+    class="w-[400px]"
+    type="textarea"
+    placeholder="Enter your description"
+    label_placement="outside"
+  />
+  <.input
+    name="description"
+    label_text="Description"
+    class="w-[400px]"
+    size="lg"
+    type="textarea"
+    placeholder="Enter your description"
+    label_placement="outside"
+  />
+
+  <.input
+    name="description"
+    label_text="Description"
+    class="w-[400px]"
+    size="sm"
+    type="textarea"
+    placeholder="Enter your description"
+    label_placement="outside-left"
+  />
+  <.input
+    name="description"
+    label_text="Description"
+    class="w-[400px]"
+    type="textarea"
+    placeholder="Enter your description"
+    label_placement="outside-left"
+  />
+  <.input
+    name="description"
+    label_text="Description"
+    class="w-[400px]"
+    size="lg"
+    type="textarea"
+    placeholder="Enter your description"
+    label_placement="outside-left"
   />
 </div>

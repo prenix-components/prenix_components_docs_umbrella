@@ -24,6 +24,12 @@ module.exports = {
         success: 'hsl(var(--success) / <alpha-value>)',
         warning: 'hsl(var(--warning) / <alpha-value>)',
         danger: 'hsl(var(--danger) / <alpha-value>)',
+        'neutral1-foreground':
+          'hsl(var(--neutral1-foreground) / <alpha-value>)',
+        'neutral2-foreground':
+          'hsl(var(--neutral2-foreground) / <alpha-value>)',
+        'neutral3-foreground':
+          'hsl(var(--neutral3-foreground) / <alpha-value>)',
       },
     },
   },
@@ -62,7 +68,6 @@ module.exports = {
     ),
 
     plugin(function ({ matchComponents, theme }) {
-      console.log('matchComponents', matchComponents)
       let iconsDir = path.join(__dirname, './node_modules/ionicons/dist/svg')
       let values = {}
 

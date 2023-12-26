@@ -73,10 +73,6 @@ defmodule PrenixComponentsDocsWeb.DocsController do
     render(conn, page_title: "Modal")
   end
 
-  def popover_show(conn, _params) do
-    render(conn, page_title: "Popover")
-  end
-
   def spinner_show(conn, _params) do
     render(conn, page_title: "Spinner")
   end

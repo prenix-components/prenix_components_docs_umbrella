@@ -7,18 +7,218 @@
       </.button>
     </:toggle>
 
-    <:menu>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-    </:menu>
+    <.dropdown_item>Level 1</.dropdown_item>
+    <.dropdown_item>Level 1</.dropdown_item>
+    <.dropdown_item>Level 1</.dropdown_item>
+    <.dropdown_item>Level 1</.dropdown_item>
+    <.dropdown_item>Level 1</.dropdown_item>
+  </.dropdown>
+</div>
+
+<h2>Custom Content</h2>
+<div class="preview">
+  <.dropdown content_class="w-64">
+    <:toggle>
+      <.button>Open Popover</.button>
+    </:toggle>
+
+    <div class="flex items-center justify-between mb-2">
+      <a href="#">
+        <img class="w-10 h-10 rounded-full" src="https://picsum.photos/200/300" alt="Jese Leos" />
+      </a>
+      <div>
+        <button
+          type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-1.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+        >
+          Follow
+        </button>
+      </div>
+    </div>
+    <p class="text-base font-semibold leading-none text-gray-900 ">
+      <a href="#">Jese Leos</a>
+    </p>
+    <p class="mb-3 text-sm font-normal">
+      <a href="#" class="hover:underline">@jeseleos</a>
+    </p>
+    <p class="mb-4 text-sm">
+      Open-source contributor. Building <a
+        href="#"
+        class="text-blue-600 dark:text-blue-500 hover:underline"
+      >flowbite.com</a>.
+    </p>
+    <ul class="flex text-sm">
+      <li class="me-2">
+        <a href="#" class="hover:underline">
+          <span class="font-semibold">799</span>
+          <span>Following</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="hover:underline">
+          <span class="font-semibold">3,758</span>
+          <span>Followers</span>
+        </a>
+      </li>
+    </ul>
+  </.dropdown>
+</div>
+
+<h2>With Inputs</h2>
+<div class="preview">
+  <.dropdown content_class="w-[380px]">
+    <:toggle>
+      <.button>Open Popover</.button>
+    </:toggle>
+
+    <div class="px-1 py-2 w-full flex flex-col gap-4">
+      <.input name="email">
+        <:label>
+          <.icon name="ion-mail" /> Email
+        </:label>
+      </.input>
+
+      <.input name="email">
+        <:label>
+          <.icon name="ion-mail" /> Email
+        </:label>
+      </.input>
+
+      <.input name="email">
+        <:label>
+          <.icon name="ion-mail" /> Email
+        </:label>
+      </.input>
+
+      <.input name="email">
+        <:label>
+          <.icon name="ion-mail" /> Email
+        </:label>
+      </.input>
+
+      <.autocomplete
+        name="country"
+        label_text="Country"
+        options={[
+          %{
+            value: 1,
+            name: "Germany",
+            template: ~s[
+        <div class="flex items-center">
+          <img class="h-4 w-4 mr-2" src="#{~p"/images/germany.png"}" />
+          #{PrenixComponents.Helpers.html_safe_escape("<h1>Germany</h1>")}
+        </div>]
+          },
+          %{
+            value: 2,
+            name: "Japan",
+            template: ~s[
+        <div class="flex items-center">
+          <img class="h-4 w-4 mr-2" src="#{~p"/images/japan.png"}" />
+          Japan
+        </div>]
+          },
+          %{
+            value: 3,
+            name: "China",
+            template: ~s[
+        <div class="flex items-center">
+          <img class="h-4 w-4 mr-2" src="#{~p"/images/china.png"}" />
+          China
+        </div>]
+          },
+          %{
+            value: 4,
+            name: "South Korea",
+            template: ~s[
+        <div class="flex items-center">
+          <img class="h-4 w-4 mr-2" src="#{~p"/images/south-korea.png"}" />
+          South Korea
+        </div>]
+          }
+        ]}
+      />
+
+      <.checkbox_group
+        name="cities"
+        id="cities"
+        label_text="Select Cities"
+        options={[
+          %{value: 1, name: "China"},
+          %{value: 2, name: "Malaysia"},
+          %{value: 3, name: "Japan"}
+        ]}
+      />
+    </div>
+  </.dropdown>
+</div>
+
+<h2>With Input Toggle</h2>
+<div class="preview">
+  <.dropdown content_class="w-[380px]">
+    <:toggle>
+      <.input name="email">
+        <:label>
+          <.icon name="ion-mail" /> Email
+        </:label>
+      </.input>
+    </:toggle>
+
+    <div class="px-1 py-2 w-full flex flex-col gap-4">
+      <.autocomplete
+        name="country"
+        label_text="Country"
+        options={[
+          %{
+            value: 1,
+            name: "Germany",
+            template: ~s[
+        <div class="flex items-center">
+          <img class="h-4 w-4 mr-2" src="#{~p"/images/germany.png"}" />
+          #{PrenixComponents.Helpers.html_safe_escape("<h1>Germany</h1>")}
+        </div>]
+          },
+          %{
+            value: 2,
+            name: "Japan",
+            template: ~s[
+        <div class="flex items-center">
+          <img class="h-4 w-4 mr-2" src="#{~p"/images/japan.png"}" />
+          Japan
+        </div>]
+          },
+          %{
+            value: 3,
+            name: "China",
+            template: ~s[
+        <div class="flex items-center">
+          <img class="h-4 w-4 mr-2" src="#{~p"/images/china.png"}" />
+          China
+        </div>]
+          },
+          %{
+            value: 4,
+            name: "South Korea",
+            template: ~s[
+        <div class="flex items-center">
+          <img class="h-4 w-4 mr-2" src="#{~p"/images/south-korea.png"}" />
+          South Korea
+        </div>]
+          }
+        ]}
+      />
+
+      <.checkbox_group
+        name="cities"
+        id="cities"
+        label_text="Select Cities"
+        options={[
+          %{value: 1, name: "China"},
+          %{value: 2, name: "Malaysia"},
+          %{value: 3, name: "Japan"}
+        ]}
+      />
+    </div>
   </.dropdown>
 </div>
 
@@ -31,43 +231,35 @@
       </.button>
     </:toggle>
 
-    <:menu>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
+    <.dropdown_item>Level 1</.dropdown_item>
+    <.dropdown_item>Level 1</.dropdown_item>
 
-      <.dropdown submenu={true}>
+    <.dropdown submenu>
+      <:toggle>
+        <.dropdown_item submenu_toggle color="primary">Open Level 2</.dropdown_item>
+      </:toggle>
+
+      <.dropdown_item>Level 2</.dropdown_item>
+      <.dropdown_item>Level 2</.dropdown_item>
+    </.dropdown>
+
+    <.dropdown submenu>
+      <:toggle>
+        <.dropdown_item submenu_toggle color="primary">Open Level 2</.dropdown_item>
+      </:toggle>
+
+      <.dropdown_item>Level 2</.dropdown_item>
+      <.dropdown_item>Level 2</.dropdown_item>
+      <.dropdown submenu variant="soft">
         <:toggle>
-          <.dropdown_item submenu={true} color="primary">Open Level 2</.dropdown_item>
+          <.dropdown_item submenu_toggle>Open Level 3</.dropdown_item>
         </:toggle>
 
-        <:menu>
-          <.dropdown_item>Level 2</.dropdown_item>
-          <.dropdown_item>Level 2</.dropdown_item>
-        </:menu>
+        <.dropdown_item color="primary">Level 3</.dropdown_item>
+        <.dropdown_item color="secondary">Level 3</.dropdown_item>
+        <.dropdown_item color="success">Level 3</.dropdown_item>
       </.dropdown>
-
-      <.dropdown submenu={true}>
-        <:toggle>
-          <.dropdown_item submenu={true} color="primary">Open Level 2</.dropdown_item>
-        </:toggle>
-
-        <:menu>
-          <.dropdown_item>Level 2</.dropdown_item>
-          <.dropdown_item>Level 2</.dropdown_item>
-          <.dropdown submenu={true} variant="soft">
-            <:toggle>
-              <.dropdown_item submenu={true}>Open Level 3</.dropdown_item>
-            </:toggle>
-
-            <:menu>
-              <.dropdown_item color="primary">Level 3</.dropdown_item>
-              <.dropdown_item color="secondary">Level 3</.dropdown_item>
-              <.dropdown_item color="success">Level 3</.dropdown_item>
-            </:menu>
-          </.dropdown>
-        </:menu>
-      </.dropdown>
-    </:menu>
+    </.dropdown>
   </.dropdown>
 </div>
 
@@ -80,10 +272,8 @@
       </.button>
     </:toggle>
 
-    <:menu>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-    </:menu>
+    <.dropdown_item>Level 1</.dropdown_item>
+    <.dropdown_item>Level 1</.dropdown_item>
   </.dropdown>
 
   <.dropdown placement="dropup">
@@ -93,10 +283,8 @@
       </.button>
     </:toggle>
 
-    <:menu>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-    </:menu>
+    <.dropdown_item>Level 1</.dropdown_item>
+    <.dropdown_item>Level 1</.dropdown_item>
   </.dropdown>
 
   <.dropdown placement="dropup-center">
@@ -106,10 +294,8 @@
       </.button>
     </:toggle>
 
-    <:menu>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-    </:menu>
+    <.dropdown_item>Level 1</.dropdown_item>
+    <.dropdown_item>Level 1</.dropdown_item>
   </.dropdown>
 
   <.dropdown placement="dropend">
@@ -119,10 +305,8 @@
       </.button>
     </:toggle>
 
-    <:menu>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-    </:menu>
+    <.dropdown_item>Level 1</.dropdown_item>
+    <.dropdown_item>Level 1</.dropdown_item>
   </.dropdown>
 
   <.dropdown placement="dropstart">
@@ -132,10 +316,8 @@
       </.button>
     </:toggle>
 
-    <:menu>
-      <.dropdown_item>Level 1</.dropdown_item>
-      <.dropdown_item>Level 1</.dropdown_item>
-    </:menu>
+    <.dropdown_item>Level 1</.dropdown_item>
+    <.dropdown_item>Level 1</.dropdown_item>
   </.dropdown>
 </div>
 
@@ -148,11 +330,9 @@
       </.button>
     </:toggle>
 
-    <:menu>
-      <.dropdown_item type="button">Profile</.dropdown_item>
-      <.dropdown_item type="button">Billing</.dropdown_item>
-      <.dropdown_item type="button">Settings</.dropdown_item>
-    </:menu>
+    <.dropdown_item type="button">Profile</.dropdown_item>
+    <.dropdown_item type="button">Billing</.dropdown_item>
+    <.dropdown_item type="button">Settings</.dropdown_item>
   </.dropdown>
 </div>
 
@@ -168,11 +348,9 @@
       </.button>
     </:toggle>
 
-    <:menu>
-      <.dropdown_item type="button">Profile</.dropdown_item>
-      <.dropdown_item type="button">Billing</.dropdown_item>
-      <.dropdown_item type="button">Settings</.dropdown_item>
-    </:menu>
+    <.dropdown_item type="button">Profile</.dropdown_item>
+    <.dropdown_item type="button">Billing</.dropdown_item>
+    <.dropdown_item type="button">Settings</.dropdown_item>
   </.dropdown>
 </div>
 
@@ -184,14 +362,12 @@
       <.button>Dropdown</.button>
     </:toggle>
 
-    <:menu>
-      <.dropdown_item type="button">Default</.dropdown_item>
-      <.dropdown_item type="button" color="primary">Primary</.dropdown_item>
-      <.dropdown_item type="button" color="secondary">Secondary</.dropdown_item>
-      <.dropdown_item type="button" color="success">Success</.dropdown_item>
-      <.dropdown_item type="button" color="warning">Warning</.dropdown_item>
-      <.dropdown_item type="button" color="danger">Danger</.dropdown_item>
-    </:menu>
+    <.dropdown_item type="button">Default</.dropdown_item>
+    <.dropdown_item type="button" color="primary">Primary</.dropdown_item>
+    <.dropdown_item type="button" color="secondary">Secondary</.dropdown_item>
+    <.dropdown_item type="button" color="success">Success</.dropdown_item>
+    <.dropdown_item type="button" color="warning">Warning</.dropdown_item>
+    <.dropdown_item type="button" color="danger">Danger</.dropdown_item>
   </.dropdown>
 </div>
 
@@ -202,14 +378,12 @@
       <.button>Dropdown</.button>
     </:toggle>
 
-    <:menu>
-      <.dropdown_item type="button">Default</.dropdown_item>
-      <.dropdown_item type="button" color="primary">Primary</.dropdown_item>
-      <.dropdown_item type="button" color="secondary">Secondary</.dropdown_item>
-      <.dropdown_item type="button" color="success">Success</.dropdown_item>
-      <.dropdown_item type="button" color="warning">Warning</.dropdown_item>
-      <.dropdown_item type="button" color="danger">Danger</.dropdown_item>
-    </:menu>
+    <.dropdown_item type="button">Default</.dropdown_item>
+    <.dropdown_item type="button" color="primary">Primary</.dropdown_item>
+    <.dropdown_item type="button" color="secondary">Secondary</.dropdown_item>
+    <.dropdown_item type="button" color="success">Success</.dropdown_item>
+    <.dropdown_item type="button" color="warning">Warning</.dropdown_item>
+    <.dropdown_item type="button" color="danger">Danger</.dropdown_item>
   </.dropdown>
 </div>
 
@@ -222,12 +396,10 @@
       </.button>
     </:toggle>
 
-    <:menu>
-      <.dropdown_item type="button">Profile</.dropdown_item>
-      <.dropdown_divider />
-      <.dropdown_item type="button">Billing</.dropdown_item>
-      <.dropdown_item type="button">Settings</.dropdown_item>
-    </:menu>
+    <.dropdown_item type="button">Profile</.dropdown_item>
+    <.dropdown_divider />
+    <.dropdown_item type="button">Billing</.dropdown_item>
+    <.dropdown_item type="button">Settings</.dropdown_item>
   </.dropdown>
 </div>
 
@@ -240,28 +412,26 @@
       </.button>
     </:toggle>
 
-    <:menu>
-      <.dropdown_item type="button">
-        <:start_content>
-          <.icon name="ion-person-outline" size="sm" />
-        </:start_content>
-        Profile
-      </.dropdown_item>
-      <.dropdown_item type="button">
-        Billing
-        <:end_content>
-          <.icon name="ion-newspaper-outline" size="sm" />
-        </:end_content>
-      </.dropdown_item>
-      <.dropdown_divider />
+    <.dropdown_item type="button">
+      <:start_content>
+        <.icon name="ion-person-outline" size="sm" />
+      </:start_content>
+      Profile
+    </.dropdown_item>
+    <.dropdown_item type="button">
+      Billing
+      <:end_content>
+        <.icon name="ion-newspaper-outline" size="sm" />
+      </:end_content>
+    </.dropdown_item>
+    <.dropdown_divider />
 
-      <.dropdown_item type="button" color="danger">
-        <span class="text-danger group-hover:text-[--dropdown-item-foreground]">Log Out</span>
-        <:end_content>
-          <.icon name="ion-log-out-outline" size="sm" />
-        </:end_content>
-      </.dropdown_item>
-    </:menu>
+    <.dropdown_item type="button" color="danger">
+      <span class="text-danger group-hover:text-[--dropdown-item-foreground]">Log Out</span>
+      <:end_content>
+        <.icon name="ion-log-out-outline" size="sm" />
+      </:end_content>
+    </.dropdown_item>
   </.dropdown>
 </div>
 
@@ -274,11 +444,9 @@
       </.button>
     </:toggle>
 
-    <:menu>
-      <.dropdown_item>Profile</.dropdown_item>
-      <.dropdown_item>Billing</.dropdown_item>
-      <.dropdown_item href="/" disabled>Settings</.dropdown_item>
-      <.dropdown_item type="button" disabled>Disabled button</.dropdown_item>
-    </:menu>
+    <.dropdown_item>Profile</.dropdown_item>
+    <.dropdown_item>Billing</.dropdown_item>
+    <.dropdown_item href="/" disabled>Settings</.dropdown_item>
+    <.dropdown_item type="button" disabled>Disabled button</.dropdown_item>
   </.dropdown>
 </div>
