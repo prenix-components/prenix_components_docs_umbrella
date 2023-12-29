@@ -29,6 +29,10 @@ defmodule PrenixComponentsDocsWeb.DocsController do
     render(conn, page_title: "Autocomplete", options: options, options_2: options_2)
   end
 
+  def avatar_show(conn, _params) do
+    render(conn, page_title: "Avatar")
+  end
+
   def button_show(conn, _params) do
     render(conn, page_title: "Button")
   end
@@ -67,6 +71,10 @@ defmodule PrenixComponentsDocsWeb.DocsController do
 
   def input_show(conn, _params) do
     render(conn, page_title: "Input")
+  end
+
+  def link_show(conn, _params) do
+    render(conn, page_title: "Link")
   end
 
   def modal_show(conn, _params) do

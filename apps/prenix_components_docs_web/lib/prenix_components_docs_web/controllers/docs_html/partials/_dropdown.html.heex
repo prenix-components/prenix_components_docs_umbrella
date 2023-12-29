@@ -74,25 +74,25 @@
     <div class="px-1 py-2 w-full flex flex-col gap-4">
       <.input name="email">
         <:label>
-          <.icon name="ion-mail" /> Email
+          <.icon name="mdi-email" /> Email
         </:label>
       </.input>
 
       <.input name="email">
         <:label>
-          <.icon name="ion-mail" /> Email
+          <.icon name="mdi-email" /> Email
         </:label>
       </.input>
 
       <.input name="email">
         <:label>
-          <.icon name="ion-mail" /> Email
+          <.icon name="mdi-email" /> Email
         </:label>
       </.input>
 
       <.input name="email">
         <:label>
-          <.icon name="ion-mail" /> Email
+          <.icon name="mdi-email" /> Email
         </:label>
       </.input>
 
@@ -159,7 +159,7 @@
     <:toggle>
       <.input name="email">
         <:label>
-          <.icon name="ion-mail" /> Email
+          <.icon name="mdi-email" /> Email
         </:label>
       </.input>
     </:toggle>
@@ -250,7 +250,7 @@
 
       <.dropdown_item>Level 2</.dropdown_item>
       <.dropdown_item>Level 2</.dropdown_item>
-      <.dropdown submenu variant="soft">
+      <.dropdown submenu variant="flat">
         <:toggle>
           <.dropdown_item submenu_toggle>Open Level 3</.dropdown_item>
         </:toggle>
@@ -343,7 +343,7 @@
       <.button>
         Dropdown
         <.dropdown_rotate>
-          <.icon name="ion-add-circle" />
+          <.icon name="mdi-add" />
         </.dropdown_rotate>
       </.button>
     </:toggle>
@@ -371,9 +371,9 @@
   </.dropdown>
 </div>
 
-<h3>Soft</h3>
+<h3>Flat</h3>
 <div class="preview">
-  <.dropdown variant="soft">
+  <.dropdown variant="flat">
     <:toggle>
       <.button>Dropdown</.button>
     </:toggle>
@@ -414,14 +414,14 @@
 
     <.dropdown_item type="button">
       <:start_content>
-        <.icon name="ion-person-outline" size="sm" />
+        <.icon name="mdi-person" size="sm" />
       </:start_content>
       Profile
     </.dropdown_item>
     <.dropdown_item type="button">
       Billing
       <:end_content>
-        <.icon name="ion-newspaper-outline" size="sm" />
+        <.icon name="mdi-outlined-person" size="sm" />
       </:end_content>
     </.dropdown_item>
     <.dropdown_divider />
@@ -429,7 +429,7 @@
     <.dropdown_item type="button" color="danger">
       <span class="text-danger group-hover:text-[--dropdown-item-foreground]">Log Out</span>
       <:end_content>
-        <.icon name="ion-log-out-outline" size="sm" />
+        <.icon name="mdi-logout" size="sm" />
       </:end_content>
     </.dropdown_item>
   </.dropdown>

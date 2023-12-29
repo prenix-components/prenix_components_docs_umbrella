@@ -275,7 +275,7 @@
     options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
   >
     <:start_content>
-      <.icon name="ion-mail-outline" class="text-gray-400" />
+      <.icon name="mdi-email" class="text-gray-400" />
     </:start_content>
   </.autocomplete>
 
@@ -287,7 +287,7 @@
     label_placement="outside"
   >
     <:start_content>
-      <.icon name="ion-mail-outline" class="text-gray-400" />
+      <.icon name="mdi-outlined-mark-email-read" class="text-gray-400" />
     </:start_content>
   </.autocomplete>
 
@@ -532,7 +532,7 @@
     options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
   >
     <:label>
-      <.icon name="ion-person" size="sm" /> User
+      <.icon name="mdi-person" size="sm" /> User
     </:label>
   </.autocomplete>
 </div>
@@ -568,8 +568,7 @@
     options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
   >
     <:helper>
-      <.icon name="ion-alert-circle" color="warning" />
-      We'll never share your email with anyone else.
+      <.icon name="mdi-report" color="warning" /> We'll never share your email with anyone else.
     </:helper>
   </.autocomplete>
 </div>
@@ -615,7 +614,6 @@
     class="w-[400px] max-w-full"
     type="multiple"
     value={[1]}
-    options={Enum.map(@options_2, fn x -> %{value: x.id, name: x.name, disabled: x.id == 2} end)}
     name="country"
     label_text="Country"
     options={[

@@ -146,7 +146,7 @@
 <div class="preview">
   <.input name="email" class="w-[400px]">
     <:label>
-      <.icon name="ion-mail" /> Email
+      <.icon name="mdi-email" /> Email
     </:label>
   </.input>
 </div>
@@ -189,7 +189,7 @@
     placeholder="john.doe@example.com"
   >
     <:helper>
-      <.icon name="ion-alert-circle-outline" color="warning" />
+      <.icon name="mdi-report-problem" color="warning" />
       We'll never share your email with anyone else.
     </:helper>
   </.input>
@@ -203,6 +203,15 @@
     class="w-[400px]"
     placeholder="john.doe@example.com"
     helper_text="Please enter a valid email."
+    invalid={true}
+  />
+
+  <.input
+    name="email"
+    label_text="Email"
+    class="w-[400px]"
+    placeholder="john.doe@example.com"
+    errors={["Please enter a valid email.", "Email can't be blank."]}
     invalid={true}
   />
 </div>
@@ -223,7 +232,7 @@
 <div class="preview">
   <.input name="email" label_text="Email" class="w-[400px]" label_placement="outside">
     <:start_content>
-      <.icon name="ion-mail-outline" class="text-gray-400" />
+      <.icon name="mdi-outlined-email" class="text-gray-400" />
     </:start_content>
   </.input>
 

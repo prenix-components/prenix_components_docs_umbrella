@@ -18,18 +18,16 @@
           </.button>
         </:toggle>
 
-        <:menu>
-          <.dropdown_item>Level 1</.dropdown_item>
-          <.dropdown_item>Level 1</.dropdown_item>
-          <.dropdown_item>Level 1</.dropdown_item>
-          <.dropdown_item>Level 1</.dropdown_item>
-          <.dropdown_item>Level 1</.dropdown_item>
-          <.dropdown_item>Level 1</.dropdown_item>
-          <.dropdown_item>Level 1</.dropdown_item>
-          <.dropdown_item>Level 1</.dropdown_item>
-          <.dropdown_item>Level 1</.dropdown_item>
-          <.dropdown_item>Level 1</.dropdown_item>
-        </:menu>
+        <.dropdown_item>Level 1</.dropdown_item>
+        <.dropdown_item>Level 1</.dropdown_item>
+        <.dropdown_item>Level 1</.dropdown_item>
+        <.dropdown_item>Level 1</.dropdown_item>
+        <.dropdown_item>Level 1</.dropdown_item>
+        <.dropdown_item>Level 1</.dropdown_item>
+        <.dropdown_item>Level 1</.dropdown_item>
+        <.dropdown_item>Level 1</.dropdown_item>
+        <.dropdown_item>Level 1</.dropdown_item>
+        <.dropdown_item>Level 1</.dropdown_item>
       </.dropdown>
 
       <.dropdown>
@@ -39,32 +37,26 @@
           </.button>
         </:toggle>
 
-        <:menu>
-          <.dropdown_item>Level 1</.dropdown_item>
-          <.dropdown_item>Level 1</.dropdown_item>
+        <.dropdown_item>Level 1</.dropdown_item>
+        <.dropdown_item>Level 1</.dropdown_item>
 
-          <.dropdown submenu={true}>
+        <.dropdown submenu={true}>
+          <:toggle>
+            <.dropdown_item submenu_toggle={true} color="primary">Open Level 2</.dropdown_item>
+          </:toggle>
+
+          <.dropdown_item>Level 2</.dropdown_item>
+          <.dropdown_item>Level 2</.dropdown_item>
+          <.dropdown submenu={true} variant="flat">
             <:toggle>
-              <.dropdown_item submenu={true} color="primary">Open Level 2</.dropdown_item>
+              <.dropdown_item submenu_toggle={true}>Open Level 3</.dropdown_item>
             </:toggle>
 
-            <:menu>
-              <.dropdown_item>Level 2</.dropdown_item>
-              <.dropdown_item>Level 2</.dropdown_item>
-              <.dropdown submenu={true} variant="soft">
-                <:toggle>
-                  <.dropdown_item submenu={true}>Open Level 3</.dropdown_item>
-                </:toggle>
-
-                <:menu>
-                  <.dropdown_item color="primary">Level 3</.dropdown_item>
-                  <.dropdown_item color="secondary">Level 3</.dropdown_item>
-                  <.dropdown_item color="success">Level 3</.dropdown_item>
-                </:menu>
-              </.dropdown>
-            </:menu>
+            <.dropdown_item color="primary">Level 3</.dropdown_item>
+            <.dropdown_item color="secondary">Level 3</.dropdown_item>
+            <.dropdown_item color="success">Level 3</.dropdown_item>
           </.dropdown>
-        </:menu>
+        </.dropdown>
       </.dropdown>
     </:col>
   </.table>

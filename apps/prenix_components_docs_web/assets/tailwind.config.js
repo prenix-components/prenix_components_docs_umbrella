@@ -14,6 +14,7 @@ module.exports = {
     '../../prenix_components/assets/css/**/*.css',
     '../../prenix_components/assets/js/**/*.js',
     '../../prenix_components/vendors/**/*.js',
+    '../../prenix_components/config/config.exs',
   ],
   theme: {
     extend: {
@@ -68,26 +69,38 @@ module.exports = {
     ),
 
     plugin(function ({ matchComponents, theme }) {
-      let iconsDir = path.join(__dirname, './node_modules/ionicons/dist/svg')
+      let iconsDir = path.join(
+        __dirname,
+        './node_modules/@material-design-icons/svg',
+      )
       let values = {}
-
-      fs.readdirSync(path.join(iconsDir)).forEach((file) => {
-        let name = path.basename(file, '.svg')
-        values[name] = { name, fullPath: path.join(iconsDir, file) }
+      let icons = [
+        ['', '/round'],
+        ['filled-', '/filled'],
+        ['outlined-', '/outlined'],
+        ['sharp-', '/sharp'],
+      ]
+      icons.forEach(([prefix, dir]) => {
+        fs.readdirSync(path.join(iconsDir, dir)).map((file) => {
+          let name = prefix + path.basename(file, '.svg').replace(/_/g, '-')
+          values[name] = { name, fullPath: path.join(iconsDir, dir, file) }
+        })
       })
 
       matchComponents(
         {
-          ion: ({ name, fullPath }) => {
+          mdi: ({ name, fullPath }) => {
             let content = fs
               .readFileSync(fullPath)
               .toString()
               .replace(/\r?\n|\r/g, '')
+              .replace(/width="[^\"]*"/, '')
+              .replace(/height="[^\"]*"/, '')
 
             return {
-              [`--ion-${name}`]: `url('data:image/svg+xml;utf8,${content}')`,
-              '-webkit-mask': `var(--ion-${name})`,
-              mask: `var(--ion-${name})`,
+              [`--mdi-${name}`]: `url('data:image/svg+xml;utf8,${content}')`,
+              '-webkit-mask': `var(--mdi-${name})`,
+              mask: `var(--mdi-${name})`,
               'mask-repeat': 'no-repeat',
               'background-color': 'currentColor',
               'vertical-align': 'middle',
@@ -100,5 +113,39 @@ module.exports = {
         { values },
       )
     }),
+
+    // plugin(function ({ matchComponents, theme }) {
+    //   let iconsDir = path.join(__dirname, './node_modules/ionicons/dist/svg')
+    //   let values = {}
+
+    //   fs.readdirSync(path.join(iconsDir)).forEach((file) => {
+    //     let name = path.basename(file, '.svg')
+    //     values[name] = { name, fullPath: path.join(iconsDir, file) }
+    //   })
+
+    //   matchComponents(
+    //     {
+    //       ion: ({ name, fullPath }) => {
+    //         let content = fs
+    //           .readFileSync(fullPath)
+    //           .toString()
+    //           .replace(/\r?\n|\r/g, '')
+
+    //         return {
+    //           [`--ion-${name}`]: `url('data:image/svg+xml;utf8,${content}')`,
+    //           '-webkit-mask': `var(--ion-${name})`,
+    //           mask: `var(--ion-${name})`,
+    //           'mask-repeat': 'no-repeat',
+    //           'background-color': 'currentColor',
+    //           'vertical-align': 'middle',
+    //           display: 'inline-block',
+    //           width: theme('spacing.5'),
+    //           height: theme('spacing.5'),
+    //         }
+    //       },
+    //     },
+    //     { values },
+    //   )
+    // }),
   ],
 }

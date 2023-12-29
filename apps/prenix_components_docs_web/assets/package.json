@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "ionicons": "^7.2.2"
+    "@material-design-icons/svg": "^0.14.13",
+    "@material-symbols/svg-300": "^0.14.3"
   }
 }

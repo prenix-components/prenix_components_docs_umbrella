@@ -30,6 +30,7 @@ defmodule PrenixComponentsDocsWeb.Router do
 
     get "/accordion", DocsController, :accordion_show
     get "/autocomplete", DocsController, :autocomplete_show
+    get "/avatar", DocsController, :avatar_show
     get "/button", DocsController, :button_show
     get "/checkbox", DocsController, :checkbox_show
     get "/checkbox_group", DocsController, :checkbox_group_show
@@ -38,6 +39,7 @@ defmodule PrenixComponentsDocsWeb.Router do
     get "/dropdown", DocsController, :dropdown_show
     get "/icon", DocsController, :icon_show
     get "/input", DocsController, :input_show
+    get "/link", DocsController, :link_show
     get "/modal", DocsController, :modal_show
     get "/spinner", DocsController, :spinner_show
     get "/table", DocsController, :table_show
