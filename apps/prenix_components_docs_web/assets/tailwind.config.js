@@ -16,28 +16,9 @@ module.exports = {
     '../../prenix_components/vendors/**/*.js',
     '../../prenix_components/config/config.exs',
   ],
-  theme: {
-    extend: {
-      colors: {
-        default: 'hsl(var(--default) / <alpha-value>)',
-        primary: 'hsl(var(--primary) / <alpha-value>)',
-        secondary: 'hsl(var(--secondary) / <alpha-value>)',
-        success: 'hsl(var(--success) / <alpha-value>)',
-        warning: 'hsl(var(--warning) / <alpha-value>)',
-        danger: 'hsl(var(--danger) / <alpha-value>)',
-        'neutral1-foreground':
-          'hsl(var(--neutral1-foreground) / <alpha-value>)',
-        'neutral2-foreground':
-          'hsl(var(--neutral2-foreground) / <alpha-value>)',
-        'neutral3-foreground':
-          'hsl(var(--neutral3-foreground) / <alpha-value>)',
-      },
-    },
-  },
-  corePlugins: {
-    container: false,
-  },
+  theme: {},
   plugins: [
+    require('../../prenix_components/assets/plugin'),
     // Allows prefixing tailwind classes with LiveView classes to add rules
     // only when LiveView classes are applied, for example:
     //

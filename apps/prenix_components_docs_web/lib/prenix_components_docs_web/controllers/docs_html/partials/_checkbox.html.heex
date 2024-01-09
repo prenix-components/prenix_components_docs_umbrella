@@ -1,13 +1,83 @@
-<h2>Basic</h2>
-
+<h2>Usage</h2>
 <div class="preview">
   <.checkbox id={"basic-#{@dark}"} name="basic" value="1" label_text="Basic" />
 </div>
 
-<h2>Checked</h2>
+<h2>Sizes</h2>
+<div class="preview">
+  <.checkbox id={"size-sm-#{@dark}"} name="small" value="1" label_text="Small" size="sm" checked />
+  <.checkbox id={"size-md-#{@dark}"} name="medium" value="1" label_text="Medium" checked />
+  <.checkbox id={"size-lg-#{@dark}"} name="large" value="1" label_text="Large" size="lg" checked />
+</div>
 
+<h2>Sizes</h2>
+<div class="preview">
+  <.checkbox
+    id={"color-default-#{@dark}"}
+    name="medium"
+    value="1"
+    label_text="Default"
+    color="default"
+    checked
+  />
+  <.checkbox id={"color-primary-#{@dark}"} name="small" value="1" label_text="Primary" checked />
+  <.checkbox
+    id={"color-secondary-#{@dark}"}
+    name="large"
+    value="1"
+    label_text="Secondary"
+    color="secondary"
+    checked
+  />
+  <.checkbox
+    id={"color-success-#{@dark}"}
+    name="medium"
+    value="1"
+    label_text="Success"
+    color="success"
+    checked
+  />
+  <.checkbox
+    id={"color-warning-#{@dark}"}
+    name="medium"
+    value="1"
+    label_text="Warning"
+    color="warning"
+    checked
+  />
+  <.checkbox
+    id={"color-danger-#{@dark}"}
+    name="medium"
+    value="1"
+    label_text="Danger"
+    color="danger"
+    checked
+  />
+</div>
+
+<h2>Checked</h2>
 <div class="preview">
   <.checkbox name="checked" value="1" checked label_text="Checked" />
+</div>
+
+<h2>With Helper Text</h2>
+<div class="preview">
+  <.checkbox
+    name="checked"
+    value="1"
+    checked
+    label_text="Checked"
+    helper_text="Please check this checkbox."
+  />
+</div>
+
+<h2>With Custom Helper Text</h2>
+<div class="preview">
+  <.checkbox name="checked" value="1" checked label_text="Checked">
+    <:helper>
+      <.icon name="mdi-check" /> Please check this checkbox
+    </:helper>
+  </.checkbox>
 </div>
 
 <h2>With Custom Label</h2>
@@ -23,7 +93,7 @@
 
 <h2>Invalid</h2>
 <div class="preview">
-  <.checkbox name="invalid" value="1" label_text="Invalid" invalid />
+  <.checkbox name="invalid" value="1" label_text="Invalid" invalid errors={["This is required."]} />
 </div>
 
 <h2>Disabled</h2>

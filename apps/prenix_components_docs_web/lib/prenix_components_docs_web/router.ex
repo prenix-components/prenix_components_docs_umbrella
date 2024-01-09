@@ -31,7 +31,9 @@ defmodule PrenixComponentsDocsWeb.Router do
     get "/accordion", DocsController, :accordion_show
     get "/autocomplete", DocsController, :autocomplete_show
     get "/avatar", DocsController, :avatar_show
+    get "/badge", DocsController, :badge_show
     get "/button", DocsController, :button_show
+    get "/card", DocsController, :card_show
     get "/checkbox", DocsController, :checkbox_show
     get "/checkbox_group", DocsController, :checkbox_group_show
     get "/chip", DocsController, :chip_show

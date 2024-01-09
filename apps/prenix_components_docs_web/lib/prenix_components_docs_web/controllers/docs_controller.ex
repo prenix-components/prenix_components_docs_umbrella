@@ -33,8 +33,16 @@ defmodule PrenixComponentsDocsWeb.DocsController do
     render(conn, page_title: "Avatar")
   end
 
+  def badge_show(conn, _params) do
+    render(conn, page_title: "Badge")
+  end
+
   def button_show(conn, _params) do
     render(conn, page_title: "Button")
+  end
+
+  def card_show(conn, _params) do
+    render(conn, page_title: "Card")
   end
 
   def checkbox_show(conn, _params) do
