@@ -29,6 +29,7 @@ defmodule PrenixComponentsDocsWeb.Router do
     pipe_through :docs
 
     get "/accordion", DocsController, :accordion_show
+    get "/alert", DocsController, :alert_show
     get "/autocomplete", DocsController, :autocomplete_show
     get "/avatar", DocsController, :avatar_show
     get "/badge", DocsController, :badge_show
@@ -43,8 +44,11 @@ defmodule PrenixComponentsDocsWeb.Router do
     get "/input", DocsController, :input_show
     get "/link", DocsController, :link_show
     get "/modal", DocsController, :modal_show
+    get "/offcanvas", DocsController, :offcanvas_show
     get "/spinner", DocsController, :spinner_show
     get "/table", DocsController, :table_show
+    get "/theme_switcher", DocsController, :theme_switcher_show
+    get "/toast", DocsController, :toast_show
     get "/tooltip", DocsController, :tooltip_show
   end
 

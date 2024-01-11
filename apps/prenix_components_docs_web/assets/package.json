@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@material-design-icons/svg": "^0.14.13",
-    "@material-symbols/svg-300": "^0.14.3"
+    "@material-design-icons/svg": "^0.14.13"
   }
 }

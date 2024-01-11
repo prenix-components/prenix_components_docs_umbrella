@@ -5,6 +5,10 @@ defmodule PrenixComponentsDocsWeb.DocsController do
     render(conn, page_title: "Accordion")
   end
 
+  def alert_show(conn, _params) do
+    render(conn, page_title: "Alert")
+  end
+
   def autocomplete_show(conn, _params) do
     options = [
       %{id: 1, name: "Mark"},
@@ -89,6 +93,10 @@ defmodule PrenixComponentsDocsWeb.DocsController do
     render(conn, page_title: "Modal")
   end
 
+  def offcanvas_show(conn, _params) do
+    render(conn, page_title: "Offcanvas")
+  end
+
   def spinner_show(conn, _params) do
     render(conn, page_title: "Spinner")
   end
@@ -101,6 +109,14 @@ defmodule PrenixComponentsDocsWeb.DocsController do
     ]
 
     render(conn, page_title: "Table", users: users)
+  end
+
+  def theme_switcher_show(conn, _params) do
+    render(conn, page_title: "Theme Switcher")
+  end
+
+  def toast_show(conn, _params) do
+    render(conn, page_title: "Toast")
   end
 
   def tooltip_show(conn, _params) do

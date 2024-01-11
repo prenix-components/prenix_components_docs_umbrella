@@ -3,9 +3,9 @@
     <div class="grid grid-cols-4 gap-8">
       <div class="col-span-1">
         <h4>Components</h4>
-        <%= for x <- ~w[accordion autocomplete avatar badge button 
+        <%= for x <- ~w[accordion alert autocomplete avatar badge button 
         card checkbox_group checkbox chip datepicker dropdown link
-        icon input modal spinner table tooltip] do %>
+        icon input modal offcanvas spinner theme_switcher table toast tooltip] do %>
           <.link class="block" href={"/docs/#{x}"}>
             <%= x |> String.split("_") |> Enum.join(" ") |> String.capitalize() %>
           </.link>
