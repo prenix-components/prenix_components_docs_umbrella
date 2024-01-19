@@ -1,0 +1,28 @@
+<h2>Usage</h2>
+<div class="preview">
+  <.select
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+  />
+</div>
+
+<h2>With Value</h2>
+<div class="preview">
+  <.select
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    value={1}
+  />
+</div>
+
+<h2>With Placeholder</h2>
+<div class="preview">
+  <.select
+    name="user"
+    label_text="User"
+    options={Enum.map(@options, fn x -> %{value: x.id, name: x.name} end)}
+    placeholder="Select a user"
+  />
+</div>

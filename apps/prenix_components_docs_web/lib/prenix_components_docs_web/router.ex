@@ -38,6 +38,7 @@ defmodule PrenixComponentsDocsWeb.Router do
     get "/checkbox", DocsController, :checkbox_show
     get "/checkbox_group", DocsController, :checkbox_group_show
     get "/chip", DocsController, :chip_show
+    get "/collapse", DocsController, :collapse_show
     get "/datepicker", DocsController, :datepicker_show
     get "/dropdown", DocsController, :dropdown_show
     get "/icon", DocsController, :icon_show
@@ -45,6 +46,7 @@ defmodule PrenixComponentsDocsWeb.Router do
     get "/link", DocsController, :link_show
     get "/modal", DocsController, :modal_show
     get "/offcanvas", DocsController, :offcanvas_show
+    get "/select", DocsController, :select_show
     get "/spinner", DocsController, :spinner_show
     get "/table", DocsController, :table_show
     get "/theme_switcher", DocsController, :theme_switcher_show

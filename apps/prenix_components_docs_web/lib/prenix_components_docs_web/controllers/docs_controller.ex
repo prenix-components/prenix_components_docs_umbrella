@@ -69,6 +69,10 @@ defmodule PrenixComponentsDocsWeb.DocsController do
     render(conn, page_title: "Chip")
   end
 
+  def collapse_show(conn, _params) do
+    render(conn, page_title: "Collapse")
+  end
+
   def datepicker_show(conn, _params) do
     render(conn, page_title: "Datepicker")
   end
@@ -95,6 +99,30 @@ defmodule PrenixComponentsDocsWeb.DocsController do
 
   def offcanvas_show(conn, _params) do
     render(conn, page_title: "Offcanvas")
+  end
+
+  def select_show(conn, _params) do
+    options = [
+      %{id: 1, name: "Mark"},
+      %{id: 2, name: "Jacob"},
+      %{id: 3, name: "Larry"}
+    ]
+
+    options_2 = [
+      %{id: 1, name: "Thomas Edison"},
+      %{id: 2, name: "Nikola"},
+      %{id: 3, name: "Arnold"},
+      %{id: 4, name: "Mark"},
+      %{id: 5, name: "Bowen"},
+      %{id: 6, name: "HigginsHigginsHigginsHigginsHigginsHigginsHiggins HigginsHigginsHiggins"},
+      %{id: 7, name: "Marceline"},
+      %{id: 8, name: "Blackwell"},
+      %{id: 9, name: "Avila"},
+      %{id: 10, name: "Leighton"},
+      %{id: 11, name: "Kramer"}
+    ]
+
+    render(conn, page_title: "Select", options: options, options_2: options_2)
   end
 
   def spinner_show(conn, _params) do

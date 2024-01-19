@@ -1,0 +1,33 @@
+<h2>Usage</h2>
+<div class="preview">
+  <div class="w-full">
+    <.collapse_toggle class="mb-4" collapse_id={"collapse-usage-#{@dark}"}>
+      <.button>Open Collapse</.button>
+    </.collapse_toggle>
+
+    <.collapse id={"collapse-usage-#{@dark}"}>
+      <div class="card p-4">
+        <h2>Collapse</h2>
+      </div>
+    </.collapse>
+  </div>
+</div>
+
+<h2>Horizontal</h2>
+<div class="preview">
+  <div class="w-full">
+    <.collapse_toggle class="mb-4" collapse_id={"collapse-horizontal-#{@dark}"}>
+      <.button>Open Collapse</.button>
+    </.collapse_toggle>
+
+    <.collapse
+      id={"collapse-horizontal-#{@dark}"}
+      class="min-h-[120px] w-[300px]"
+      orientation="horizontal"
+    >
+      <div class="card p-4">
+        <h2>Horizontal</h2>
+      </div>
+    </.collapse>
+  </div>
+</div>

@@ -21,12 +21,9 @@ import 'phoenix_html'
 import { Socket } from 'phoenix'
 import { LiveSocket } from 'phoenix_live_view'
 import topbar from '../vendor/topbar'
-import {
-  prenixModules, autoInit
-} from '../../../prenix_components/assets/js/prenix_components'
+import { prenix } from '../../../prenix_components/assets/js/prenix_components'
 
-console.log({ prenixModules })
-console.log({ autoInit })
+console.log({ prenix })
 
 let csrfToken = document
   .querySelector("meta[name='csrf-token']")
